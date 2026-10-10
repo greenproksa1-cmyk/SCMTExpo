@@ -1,0 +1,639 @@
+{
+  "meta": {
+    "localeName": "English",
+    "htmlLang": "en",
+    "dir": "ltr",
+    "shortEventName": "Supply Chain, Land & Maritime Transport Exhibition & Conference",
+    "title": "Supply Chain, Land & Maritime Transport Exhibition & Conference | Yanbu 2027",
+    "description": "A specialised business platform bringing the entire transport, logistics and supply chain ecosystem under one roof. 10 January 2027, Yanbu, Kingdom of Saudi Arabia. Three days of industry, trade and logistics.",
+    "keywords": "logistics exhibition, Yanbu, supply chain, land transport, maritime transport, ports, Saudi Arabia, 2027, logistics, sustainability, Red Sea"
+  },
+  "event": {
+    "nameAr": "معرض ومؤتمر سلاسل الإمداد والنقل البري والبحري",
+    "nameEn": "Supply Chain, Land & Maritime Transport Exhibition & Conference",
+    "wordmarkAr": "معرض ومؤتمر سلاسل الإمداد",
+    "wordmarkEn": "Supply Chain & Transport Expo",
+    "tagline": "Connecting Industry. Moving Trade. Shaping Logistics.",
+    "dateLineAr": "10 January 2027",
+    "dateLineEn": "10 January 2027",
+    "placeAr": "Yanbu, Kingdom of Saudi Arabia",
+    "placeEn": "Yanbu, Kingdom of Saudi Arabia",
+    "durationAr": "Three Days",
+    "durationEn": "Three Days",
+    "dateLineFullAr": "10 January 2027 | Yanbu, Kingdom of Saudi Arabia | Three Days",
+    "dateLineFullEn": "10 January 2027 | Yanbu, Kingdom of Saudi Arabia | Three Days",
+    "startISO": "2027-01-10T09:00:00+03:00",
+    "endISO": "2027-01-12T18:00:00+03:00",
+    "isoDuration": "P3D",
+    "heroTitleAr": "Supply Chain, Land & Maritime Transport Exhibition & Conference",
+    "heroTitleEn": "Supply Chain, Land & Maritime Transport Exhibition & Conference",
+    "heroKickerAr": "International Exhibition & Conference",
+    "heroKickerEn": "International Exhibition & Conference",
+    "scrollLabelAr": "Discover more",
+    "scrollLabelEn": "Discover more"
+  },
+  "nav": {
+    "label": "Main navigation",
+    "links": [
+      { "id": "introduction", "label": "Introduction" },
+      { "id": "themes", "label": "Themes & Objectives" },
+      { "id": "ecosystem", "label": "Exhibitor Ecosystem" },
+      { "id": "visitors", "label": "Target Visitors" },
+      { "id": "business-value", "label": "Business Value" },
+      { "id": "experience", "label": "Event Experience" }
+    ],
+    "cta": "Book Your Space",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "languageLabel": "Language",
+    "switchTo": "العربية",
+    "switchToShort": "AR",
+    "currentLangShort": "EN"
+  },
+  "chapters": {
+    "label": "Exhibition chapters",
+    "items": [
+      { "id": "introduction", "title": "Introduction", "target": "introduction" },
+      { "id": "themes", "title": "Themes & Objectives", "target": "themes" },
+      { "id": "audience", "title": "Ecosystem & Audience", "target": "ecosystem" },
+      { "id": "value", "title": "Value & Impact", "target": "why-exhibit" },
+      { "id": "experience", "title": "Experience & Registration", "target": "experience" }
+    ]
+  },
+  "ui": {
+    "toBeAnnounced": "To be announced",
+    "backToTop": "Back to top",
+    "whatsapp": "Chat on WhatsApp",
+    "prev": "Previous",
+    "next": "Next",
+    "menu": "Menu",
+    "close": "Close",
+    "expand": "Show details",
+    "collapse": "Hide details",
+    "loading": "Loading…",
+    "scrollHint": "Scroll to see more"
+  },
+  "hero": {
+    "countdownLabel": "Countdown to the exhibition",
+    "days": "Days",
+    "hours": "Hours",
+    "minutes": "Minutes",
+    "seconds": "Seconds",
+    "daysFull": "days",
+    "ctaPrimary": "Book Your Space",
+    "ctaSecondary": "Register as Visitor",
+    "stats": [
+      { "value": 12, "suffix": "", "label": "Strategic objectives" },
+      { "value": 7, "suffix": "", "label": "Exhibitor sectors" },
+      { "value": 10, "suffix": "", "label": "Event stations" },
+      { "value": 3, "suffix": "", "label": "Days in Yanbu" }
+    ]
+  },
+  "introduction": {
+    "eyebrow": "Introduction",
+    "eyebrowEn": "INTRODUCTION",
+    "imageCardTitleAr": "Supply Chains",
+    "imageCardTitleEn": "Supply Chains",
+    "imageAltAr": "A busy seaport filled with containers and gantry cranes on the Red Sea coast",
+    "title": "An integrated platform connecting ports with industry and moving trade on the Red Sea coast",
+    "lead": "A specialised business platform bringing the entire transport & logistics ecosystem under one roof.",
+    "paragraphs": [
+      "The supply chain, transport and logistics sector is one of the key enablers of economic and industrial growth, and a central pillar in strengthening the Kingdom's competitiveness and supporting Saudi Vision 2030 — building an advanced logistics system that efficiently and reliably connects ports, industrial zones, distribution centres and local and regional markets.",
+      "Building on Yanbu's strategic position as an industrial, economic and logistics hub on the Red Sea coast, the Exhibition brings together an integrated ecosystem of companies specialised in transport, logistics, supply chain, ports, handling, storage, distribution and the associated technologies and solutions.",
+      "The Exhibition and its accompanying Conference provide a specialised business platform that brings together decision-makers, investors, operators, service providers, manufacturers, suppliers and end-users — helping to build new partnerships, showcase the latest solutions, and open commercial and investment channels that support the growth of the transport and logistics sector in the Kingdom."
+    ]
+  },
+  "themes": {
+    "eyebrow": "Exhibition Content & Key Themes",
+    "eyebrowEn": "EXHIBITION CONTENT & KEY THEMES",
+    "title": "Five themes shaping the logistics agenda",
+    "lead": "The principal themes that structure the Exhibition content and its conference programme.",
+    "items": [
+      {
+        "id": "corridors",
+        "number": "01",
+        "title": "Logistics Corridor and Connectivity Initiatives",
+        "en": "Logistics Corridor and Connectivity Initiatives",
+        "description": "Logistics corridors and connectivity initiatives linking ports, industrial zones and distribution centres."
+      },
+      {
+        "id": "digital",
+        "number": "02",
+        "title": "Digital Transformation and Logistics Automation",
+        "en": "Digital Transformation and Logistics Automation",
+        "description": "Digital transformation and automation across transport, warehousing and supply chain management."
+      },
+      {
+        "id": "ppp",
+        "number": "03",
+        "title": "Public-Private Partnership Integration (PPP)",
+        "en": "Public-Private Partnership Integration (PPP)",
+        "description": "Public-private partnership models supporting the transport and logistics sector."
+      },
+      {
+        "id": "routes",
+        "number": "04",
+        "title": "Regional and International Shipping Routes",
+        "en": "Regional and International Shipping Routes",
+        "description": "Regional and international shipping routes and their role in moving trade."
+      },
+      {
+        "id": "sustainability",
+        "number": "05",
+        "title": "Supply Chain Sustainability and Clean Energy",
+        "en": "Supply Chain Sustainability and Clean Energy",
+        "description": "Supply chain sustainability, energy efficiency and alternative fuels."
+      }
+    ],
+    "hint": "Hover or select any theme to view its detail"
+  },
+  "objectives": {
+    "eyebrow": "Objectives",
+    "eyebrowEn": "OBJECTIVES",
+    "title": "Twelve objectives for a stronger logistics ecosystem",
+    "hubLabelAr": "Logistics Ecosystem",
+    "hubLabelEn": "Logistics Ecosystem",
+    "hint": "Hover the radial diagram to explore the objectives, or browse the full list.",
+    "items": [
+      { "number": "01", "title": "Opening new channels for cooperation", "description": "Opening New Channels for Commercial and Investment Cooperation Between Companies, Factories, Ports, and Service Providers." },
+      { "number": "02", "title": "Supporting Saudi Vision 2030", "description": "Supporting the Objectives of Saudi Vision 2030 and the National Transport and Logistics Strategy." },
+      { "number": "03", "title": "Enabling companies to showcase", "description": "Enabling Local and International Companies to Showcase Their Products, Services, and Solutions to Decision-Makers and Buyers." },
+      { "number": "04", "title": "One business platform", "description": "Bringing Together Stakeholders Across the Supply Chain and Land & Maritime Transport Ecosystem on One Business Platform." },
+      { "number": "05", "title": "Enhancing local content", "description": "Enhancing Local Content and Localizing Services, Solutions, and Technologies Related to the Transport and Supply Chain Sector." },
+      { "number": "06", "title": "Efficient cargo movement", "description": "Supporting Efficient Cargo Movement and Connecting Ports with Industrial Zones, Distribution Centers, and Markets." },
+      { "number": "07", "title": "Strengthening Yanbu's position", "description": "Strengthening Yanbu's Position as an Integrated Industrial and Logistics Hub on the Red Sea Coast." },
+      { "number": "08", "title": "Latest digital technologies", "description": "Showcasing the Latest Technologies and Digital Solutions that Enhance Transport and Supply Chain Management Efficiency." },
+      { "number": "09", "title": "Integrating land & maritime transport", "description": "Enhancing Integration Between Maritime and Land Transport, Warehousing, Handling, Distribution, and Logistics Services." },
+      { "number": "10", "title": "Attracting strategic investments", "description": "Attracting Strategic Investments in the Transport, Logistics, and Related Infrastructure Sectors." },
+      { "number": "11", "title": "A platform for dialogue", "description": "Providing a Platform for Dialogue Between Government and Private-Sector Entities on the Sector's Future Challenges and Opportunities." },
+      { "number": "12", "title": "Supporting startups and SMEs", "description": "Supporting Startups and SMEs and Enabling Them to Reach New Customers and Partners." }
+    ]
+  },
+  "ecosystem": {
+    "eyebrow": "Exhibitor Ecosystem",
+    "eyebrowEn": "EXHIBITOR ECOSYSTEM",
+    "title": "The Complete Supply-Chain Ecosystem",
+    "lead": "Seven interconnected sectors covering the full transport and logistics ecosystem.",
+    "hubAr": "Supply Chain",
+    "hubEn": "Supply Chain",
+    "hint": "Select a sector to view its detail",
+    "selectPrompt": "Select a sector to view its detail",
+    "items": [
+      {
+        "id": "land",
+        "number": "01",
+        "title": "Land Transportation",
+        "en": "Land Transportation",
+        "image": "/images/land-transport.jpg",
+        "imageAltAr": "A fleet of trucks on a highway",
+        "details": [
+          "Road freight & transport companies",
+          "Truck fleets & commercial vehicles",
+          "Fleet management & vehicle tracking",
+          "Commercial vehicle leasing & financing",
+          "Fleet maintenance & management",
+          "Tires, spare parts & transport equipment"
+        ]
+      },
+      {
+        "id": "maritime",
+        "number": "02",
+        "title": "Maritime Transport & Ports",
+        "en": "Maritime Transport & Ports",
+        "image": "/images/hero-port.jpg",
+        "imageAltAr": "Berthed vessels at a seaport terminal",
+        "details": [
+          "Shipping lines & maritime services",
+          "Port & terminal operators",
+          "Stevedoring, loading & unloading",
+          "Shipping agencies & support services",
+          "Port & handling equipment",
+          "Port operations & management solutions"
+        ]
+      },
+      {
+        "id": "logistics",
+        "number": "03",
+        "title": "Logistics & Supply Chain",
+        "en": "Logistics & Supply Chain",
+        "image": "/images/warehouse.jpg",
+        "imageAltAr": "A logistics warehouse with a forklift",
+        "details": [
+          "Integrated logistics service providers",
+          "Freight forwarding & customs clearance",
+          "Warehousing & distribution centre management",
+          "Storage & cold storage services",
+          "Multimodal distribution & transport",
+          "Last-mile delivery services"
+        ]
+      },
+      {
+        "id": "technology",
+        "number": "04",
+        "title": "Technology & Digital Solutions",
+        "en": "Technology & Digital Solutions",
+        "details": [
+          "Transport & warehouse management systems",
+          "AI & data analytics",
+          "IoT & smart tracking",
+          "Automation & robotics",
+          "Digital supply chain platforms",
+          "Cybersecurity for logistics"
+        ]
+      },
+      {
+        "id": "equipment",
+        "number": "05",
+        "title": "Equipment & Infrastructure",
+        "en": "Equipment & Infrastructure",
+        "details": [
+          "Warehousing, handling & lifting equipment",
+          "Cranes & heavy equipment",
+          "Storage & racking systems",
+          "Packaging solutions",
+          "Refrigeration & cold chain equipment",
+          "Logistics zone infrastructure"
+        ]
+      },
+      {
+        "id": "finance",
+        "number": "06",
+        "title": "Finance, Insurance & Professional Services",
+        "en": "Finance, Insurance & Professional Services",
+        "details": [
+          "Banks & financial institutions",
+          "Insurance companies",
+          "Consulting & professional services",
+          "Risk management firms",
+          "Financing & investment solutions for logistics projects"
+        ]
+      },
+      {
+        "id": "energy",
+        "number": "07",
+        "title": "Energy & Sustainability",
+        "en": "Energy & Sustainability",
+        "details": [
+          "Fuel & energy efficiency solutions",
+          "Electric commercial vehicles",
+          "Alternative fuels & clean energy",
+          "Emissions reduction in transport & warehousing",
+          "Sustainability technologies in ports & logistics zones"
+        ]
+      }
+    ]
+  },
+  "visitors": {
+    "eyebrow": "Target Visitors",
+    "eyebrowEn": "TARGET VISITORS",
+    "title": "Four segments of decision-makers",
+    "lead": "The Exhibition convenes decision-makers from both the government and private sectors in one business environment.",
+    "hubAr": "Decision Makers",
+    "hubEn": "Decision Makers",
+    "items": [
+      {
+        "id": "executive",
+        "number": "01",
+        "title": "Executive Leadership",
+        "en": "Executive Leadership",
+        "roles": [
+          "CEOs & board members",
+          "Logistics & supply chain executives",
+          "Transport, fleet & warehouse managers",
+          "Procurement & sourcing managers",
+          "Operations & maintenance directors",
+          "Port, terminal & maritime services managers"
+        ]
+      },
+      {
+        "id": "industry",
+        "number": "02",
+        "title": "Industry & Trade",
+        "en": "Industry & Trade",
+        "roles": [
+          "Large industrial & manufacturing companies",
+          "Petrochemical, energy & mining companies",
+          "Construction & contracting firms",
+          "FMCG, pharma, retail & distribution companies",
+          "Importers, exporters & international trade firms"
+        ]
+      },
+      {
+        "id": "investment",
+        "number": "03",
+        "title": "Investment & Government",
+        "en": "Investment & Government",
+        "roles": [
+          "Transport, freight & logistics companies",
+          "Investors, investment funds & financial institutions",
+          "Government entities & regulatory authorities"
+        ]
+      },
+      {
+        "id": "innovation",
+        "number": "04",
+        "title": "Innovation & Academia",
+        "en": "Innovation & Academia",
+        "roles": [
+          "Entrepreneurs, startups & SMEs",
+          "Academics, researchers & logistics specialists",
+          "Project & infrastructure officials"
+        ]
+      }
+    ]
+  },
+  "whyExhibit": {
+    "eyebrow": "Why Exhibit at the Exhibition?",
+    "eyebrowEn": "WHY EXHIBIT AT THE EXHIBITION?",
+    "title": "Five reasons participation pays back directly",
+    "lead": "Participating as a private-sector company provides you with exceptional opportunities to achieve direct returns on investment through:",
+    "items": [
+      {
+        "number": "01",
+        "title": "Seizing Opportunities and Direct Contracts",
+        "description": "Decision-makers, government officials, and investors will come together under one roof, opening direct opportunities to establish partnerships and secure contracts and business deals."
+      },
+      {
+        "number": "02",
+        "title": "Showcasing Your Leadership and Innovative Solutions",
+        "description": "The exhibition is a powerful platform for strengthening your company's brand awareness and showcasing your latest logistics services and solutions in land and maritime transport to a specialized audience seeking excellence."
+      },
+      {
+        "number": "03",
+        "title": "Keeping Up with Market and Competitor Trends",
+        "description": "A valuable opportunity to gain firsthand insights into logistics sector trends, discover the latest technologies and innovations, and monitor competitor activity to ensure your company remains at the forefront."
+      },
+      {
+        "number": "04",
+        "title": "Expanding Your Customer Network (Networking)",
+        "description": "An ideal opportunity to gain direct access to a wide range of potential customers and target companies, build lasting business relationships, and drive sales growth."
+      },
+      {
+        "number": "05",
+        "title": "Entering New Markets",
+        "description": "Whether you are seeking to expand locally or regionally, the exhibition provides the ideal gateway to understand the requirements of new markets and connect with international agents and distributors."
+      }
+    ],
+    "ctaTitle": "Don't Let the Opportunity Pass You By…",
+    "ctaBody": "Book Your Space Now and Put Your Company at the Heart of the Next Logistics Landscape!",
+    "ctaButton": "Book Your Space Now"
+  },
+  "businessValue": {
+    "eyebrow": "Business Value",
+    "eyebrowEn": "BUSINESS VALUE",
+    "title": "From Connection to Opportunity",
+    "lead": "Eight steps that carry participation from a first meeting to lasting sector impact.",
+    "items": [
+      {
+        "number": "01",
+        "title": "Connect",
+        "subtitle": "Providing manufacturers, companies, and operators with direct access to solutions and services",
+        "description": "Providing manufacturers, companies, and operators with direct access to solutions and services that meet their operational and logistics needs."
+      },
+      {
+        "number": "02",
+        "title": "Discover",
+        "subtitle": "Showcasing the latest digital solutions and technologies",
+        "description": "Showcasing innovations and technologies that enhance the efficiency of transportation, warehousing, handling, and supply chain management."
+      },
+      {
+        "number": "03",
+        "title": "Meet",
+        "subtitle": "Building new business partnerships between companies",
+        "description": "Creating an ideal environment for meetings between local and international companies, investors, and decision-makers."
+      },
+      {
+        "number": "04",
+        "title": "Collaborate",
+        "subtitle": "Enhancing integration between land & maritime transport and localizing services",
+        "description": "Connecting Ports with Industrial Zones, Warehouses, Distribution Centers, and Land Transport Networks within a More Integrated Ecosystem."
+      },
+      {
+        "number": "05",
+        "title": "Invest",
+        "subtitle": "Supporting investment",
+        "description": "Highlighting Investment Opportunities in Infrastructure, Logistics Services, and Logistics Zones and Hubs."
+      },
+      {
+        "number": "06",
+        "title": "Grow",
+        "subtitle": "Connecting participants with solution and service providers",
+        "description": "Showcasing Solutions that Help Companies Improve Fleet, Inventory, Warehouse, Shipping, and Distribution Management."
+      },
+      {
+        "number": "07",
+        "title": "Localization",
+        "subtitle": "Industrial and services localization",
+        "description": "Creating Greater Opportunities for National Companies and SMEs to Enter Supply Chains and Sector-Related Services."
+      },
+      {
+        "number": "08",
+        "title": "The Future of the Sector",
+        "subtitle": "Improving efficiency, reducing costs, and shaping the future of the sector",
+        "description": "Through the conference and specialized discussions, the event addresses the challenges, opportunities, and future trends shaping the transport and supply chain sector."
+      }
+    ]
+  },
+  "experience": {
+    "eyebrow": "Event Experience",
+    "eyebrowEn": "EVENT EXPERIENCE",
+    "title": "Event Experience Map",
+    "lead": "The Exhibition is accompanied by an integrated programme of specialised activities and side events that enhance the commercial value and awareness of the event, including:",
+    "groupA": "Stations 01–05",
+    "groupB": "Stations 06–10",
+    "items": [
+      {
+        "number": "01",
+        "title": "Accompanying Conference",
+        "en": "Accompanying Conference",
+        "description": "Keynotes and panel discussions on the future of transport, logistics and supply chain, and the role of ports and land transport in supporting economy and industry."
+      },
+      {
+        "number": "02",
+        "title": "Decision-Makers Roundtables",
+        "en": "Decision-Makers Roundtables",
+        "description": "Specialized meetings bringing together executives and sector leaders to discuss challenges, opportunities and practical solutions."
+      },
+      {
+        "number": "03",
+        "title": "Specialized Workshops",
+        "en": "Specialized Workshops",
+        "description": "Hands-on workshops on fleet management, warehouse efficiency, digital transformation, logistics security, risk management, cold chain and more."
+      },
+      {
+        "number": "04",
+        "title": "B2B Business Meetings",
+        "en": "B2B Business Meetings",
+        "description": "Direct meetings between exhibitors, buyers, factories, companies and investors — converting participation into opportunities and commercial partnerships."
+      },
+      {
+        "number": "05",
+        "title": "Innovation & Solutions Zone",
+        "en": "Innovation & Solutions Zone",
+        "description": "A dedicated space showcasing modern technologies and innovations in AI, automation, IoT and digital solutions."
+      },
+      {
+        "number": "06",
+        "title": "Equipment & Handling Live Zone",
+        "en": "Equipment & Handling Live Zone",
+        "description": "A live, hands-on display of equipment and solutions used in warehouses, ports, distribution centres and handling operations."
+      },
+      {
+        "number": "07",
+        "title": "Investor & Finance Day",
+        "en": "Investor & Finance Day",
+        "description": "Sessions connecting investors, banks and finance firms with companies and projects operating in transport and logistics."
+      },
+      {
+        "number": "08",
+        "title": "Startup Platform",
+        "en": "Startup Platform",
+        "description": "A space for startups to present their ideas and solutions to investors, large corporates and potential customers."
+      },
+      {
+        "number": "09",
+        "title": "Open Sessions & Live Demos",
+        "en": "Open Sessions & Live Demos",
+        "description": "Live presentations of new products, technologies and solutions to visitors and specialists."
+      },
+      {
+        "number": "10",
+        "title": "Networking Receptions",
+        "en": "Networking Receptions",
+        "description": "Dedicated events fostering connections between exhibitors, visitors, decision-makers and investors — building long-term business relationships."
+      }
+    ]
+  },
+  "location": {
+    "eyebrow": "Location",
+    "eyebrowEn": "LOCATION",
+    "title": "Yanbu, Kingdom of Saudi Arabia",
+    "lead": "The industrial, economic and logistics hub on the Red Sea coast.",
+    "cityAr": "Yanbu",
+    "cityEn": "Yanbu",
+    "regionAr": "Kingdom of Saudi Arabia",
+    "regionEn": "Kingdom of Saudi Arabia",
+    "coastAr": "On the Red Sea Coast",
+    "coastEn": "On the Red Sea Coast",
+    "facts": [
+      { "label": "City", "value": "Yanbu" },
+      { "label": "Time Zone", "value": "Riyadh Time (GMT+3)" },
+      { "label": "Site Type", "value": "Industrial, economic & logistics hub" }
+    ],
+    "venueTitle": "Exhibition Venue",
+    "venueTba": "To be announced",
+    "venueNote": "The exhibition venue has not been fixed in the current profile. It will be announced as soon as it is confirmed.",
+    "datesTitle": "Dates",
+    "startDate": "10 January 2027",
+    "duration": "Three Days",
+    "mapLabel": "Approximate location of Yanbu Port on the Red Sea coast"
+  },
+  "register": {
+    "eyebrow": "Registration",
+    "eyebrowEn": "REGISTRATION",
+    "title": "Book your space or register as a visitor",
+    "lead": "Choose your registration type, and the Green Projects team will contact you to complete the details.",
+    "tabs": {
+      "exhibit": "Book Your Space",
+      "exhibitEn": "Book Your Space",
+      "visitor": "Register as Visitor",
+      "visitorEn": "Register as Visitor"
+    },
+    "exhibit": {
+      "title": "Book Your Space",
+      "subtitle": "For companies participating as an exhibitor",
+      "submit": "Send booking request",
+      "note": "Final booth sizes and pricing will be announced later. Our team will contact you to confirm the details.",
+      "fields": {
+        "company": "Company Name",
+        "contact": "Contact Person",
+        "jobTitle": "Job Title",
+        "email": "Email Address",
+        "phone": "Phone Number",
+        "sector": "Sector",
+        "boothSize": "Preferred Booth Size",
+        "message": "Message"
+      },
+      "placeholders": {
+        "company": "e.g. National Shipping Company",
+        "contact": "Full name",
+        "jobTitle": "e.g. Marketing Manager",
+        "phone": "+966 5X XXX XXXX",
+        "message": "Tell us about your business and objectives for participating…",
+        "select": "Select…"
+      }
+    },
+    "visitor": {
+      "title": "Register as Visitor",
+      "subtitle": "For accredited attendance as a participant and visitor",
+      "submit": "Register as visitor",
+      "note": "Visitor registration is free. A confirmation will be sent to your email address.",
+      "fields": {
+        "name": "Full Name",
+        "company": "Company / Organisation",
+        "jobTitle": "Job Title",
+        "email": "Email Address",
+        "phone": "Phone Number",
+        "category": "Visitor Category"
+      },
+      "placeholders": {
+        "name": "Full name",
+        "company": "Company or organisation name",
+        "jobTitle": "e.g. Planning Manager",
+        "phone": "+966 5X XXX XXXX",
+        "select": "Select a category…"
+      }
+    },
+    "boothSizes": [
+      { "value": "up-to-9", "labelAr": "Up to 9 m²", "labelEn": "Up to 9 m²" },
+      { "value": "9-18", "labelAr": "9 – 18 m²", "labelEn": "9 – 18 m²" },
+      { "value": "18-36", "labelAr": "18 – 36 m²", "labelEn": "18 – 36 m²" },
+      { "value": "36-72", "labelAr": "36 – 72 m²", "labelEn": "36 – 72 m²" },
+      { "value": "72-plus", "labelAr": "More than 72 m²", "labelEn": "More than 72 m²" },
+      { "value": "undecided", "labelAr": "Not decided yet", "labelEn": "Not decided yet" }
+    ],
+    "consent": "By submitting this form you agree to be contacted by the Green Projects team regarding the Exhibition.",
+    "validation": {
+      "required": "This field is required",
+      "email": "Please enter a valid email address",
+      "phone": "Please enter a valid phone number",
+      "minLength": "Please enter at least {n} characters",
+      "summary": "Please correct the highlighted fields below"
+    },
+    "status": {
+      "sending": "Sending…",
+      "success": "Your request has been received. The Green Projects team will contact you shortly.",
+      "error": "Something went wrong while sending. Please try again or contact us directly.",
+      "successTitle": "Thank you",
+      "errorTitle": "Submission failed"
+    }
+  },
+  "organizer": {
+    "eyebrow": "Project Owner",
+    "eyebrowEn": "PROJECT OWNER",
+    "nameAr": "Green Projects",
+    "nameEn": "Green Projects",
+    "addressLabel": "Address",
+    "addressAr": "Riyadh – King Fahd Road at the Intersection with Tahlia Road",
+    "addressEn": "Riyadh – King Fahd Road at the Intersection with Tahlia Road",
+    "phoneLabel": "Phone",
+    "phoneDisplay": "+966 59 0401 777",
+    "phoneRaw": "+966590401777",
+    "email": "contact@gren-pro.com",
+    "websiteLabel": "Website",
+    "website": "www.greeen-pro.com",
+    "websiteUrl": "https://www.greeen-pro.com",
+    "whatsappLabel": "Chat on WhatsApp",
+    "noteAr": "Green Projects — project owner and organiser of the Exhibition and Conference."
+  },
+  "footer": {
+    "navTitle": "Quick Links",
+    "contactTitle": "Contact Us",
+    "organizerTitle": "Project Owner",
+    "locationTitle": "Location",
+    "languageTitle": "Language",
+    "rights": "All rights reserved",
+    "madeWith": "Organised and led by",
+    "disclaimer": "All information on this website is drawn from the Exhibition profile. Final details are updated regularly."
+  }
+}

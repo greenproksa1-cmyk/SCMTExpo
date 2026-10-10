@@ -46,13 +46,13 @@ function Unit({
   return (
     <div
       className={cn(
-        'flex flex-col items-center gap-1.5 rounded-2xl px-3 py-3 sm:px-4 sm:py-4',
-        tone === 'dark' ? 'border border-white/15 bg-white/[0.04]' : 'border border-[var(--hairline)] bg-white',
+        'flex min-w-0 flex-col items-center gap-1 rounded-xl px-1.5 py-2.5',
+        tone === 'dark' ? 'border border-white/12 bg-white/[0.04]' : 'border border-[var(--hairline)] bg-white',
       )}
     >
       <span
         className={cn(
-          'numeral tabular text-stat-lg lg:text-stat-xl',
+          'numeral tabular text-countdown',
           tone === 'dark' ? 'text-white' : 'text-strong',
         )}
       >
@@ -60,7 +60,8 @@ function Unit({
       </span>
       <span
         className={cn(
-          'text-label-2xs font-semibold uppercase tracking-[0.14em] sm:text-label-xs',
+          'text-label-2xs font-semibold uppercase leading-tight tracking-[0.1em]',
+          'max-w-full truncate text-center',
           tone === 'dark' ? 'text-muted' : 'text-muted',
         )}
       >
@@ -122,14 +123,14 @@ export function Countdown({
     <div className={className}>
       <p
         className={cn(
-          'mb-3 text-label-2xs font-semibold uppercase tracking-[0.2em]',
+          'mb-2.5 text-label-2xs font-semibold uppercase tracking-[0.18em]',
           tone === 'dark' ? 'text-orange-300' : 'text-accent',
         )}
       >
         {dict.hero.countdownLabel}
       </p>
       <div
-        className="grid grid-cols-4 gap-2 sm:gap-3"
+        className="grid grid-cols-4 gap-1.5 sm:gap-2"
         role="timer"
         aria-live="off"
         aria-label={`${dict.hero.countdownLabel}: ${value.days} ${labels[0]}, ${value.hours} ${labels[1]}, ${value.minutes} ${labels[2]}, ${value.seconds} ${labels[3]}`}

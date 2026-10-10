@@ -69,7 +69,7 @@ export function StatFigure({
 }) {
   return (
     <div className="flex flex-col gap-1.5">
-      <span className="numeral text-stat-lg sm:text-stat-xl">
+      <span className="numeral text-stat-lg">
         <CountUp value={value} />
         {suffix}
       </span>

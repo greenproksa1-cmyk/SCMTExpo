@@ -64,6 +64,13 @@ const config: Config = {
         'stat-lg': ['clamp(2.125rem, 3vw, 2.625rem)', { lineHeight: '1.05', letterSpacing: '-0.02em' }],
         'stat-xl': ['clamp(3.5rem, 11vw, 7rem)', { lineHeight: '0.92', letterSpacing: '-0.03em' }],
 
+        /*
+         * Countdown digits. Sized from the component's own container, never the
+         * viewport: the same countdown is used in the hero and in a narrow card,
+         * so it must stay legible in both without ever overflowing.
+         */
+        countdown: ['clamp(1.5rem, 2.6vw, 2rem)', { lineHeight: '1.1', letterSpacing: '-0.01em' }],
+
         /* Body — one rhythm, so paragraphs feel uniform everywhere. */
         'body-lg': ['1.0625rem', { lineHeight: '1.75', letterSpacing: '-0.005em' }],
         'body-md': ['1rem', { lineHeight: '1.72', letterSpacing: '-0.004em' }],

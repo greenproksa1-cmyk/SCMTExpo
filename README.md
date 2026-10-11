@@ -80,14 +80,23 @@ Top-level keys: `meta`, `event`, `nav`, `chapters`, `ui`, `hero`, `introduction`
 
 ### Arabic text hygiene
 
-`scripts/check-content.cjs` scans the dictionaries for the kind of corruption
-that PDF extraction introduces (stray CJK, glued Latin words inside Arabic
-runs, mixed diacritics, control characters). Run it after any large content
-edit:
+PDF extraction once replaced five letters inside the Arabic word
+"استراتيجيًا" with two Hangul syllables, and the damage survived into the
+rendered page. Three guards now exist so it cannot come back silently:
 
 ```bash
+# 1. content: foreign scripts and glued Latin words inside Arabic runs
 node scripts/check-content.cjs content/ar.json content/en.json
+
+# 2. source: stray characters in components, CSS, content or SVG
+node scripts/scan-source.cjs
+
+# 3. served output: what the browser actually receives
+node scripts/scan-cjk.cjs http://localhost:3100/ar http://localhost:3100/en
 ```
+
+Run all three after any bulk content edit. The first is the one to run in CI —
+it exits non-zero on failure.
 
 ---
 

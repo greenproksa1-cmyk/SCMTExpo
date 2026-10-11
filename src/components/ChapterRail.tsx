@@ -2,7 +2,7 @@
 
 import type { Dictionary } from '@/lib/types';
 import { cn } from '@/lib/cn';
-import { useActiveSection } from '@/hooks/useScrollState';
+import { useActiveSection, useScrolledPast } from '@/hooks/useScrollState';
 
 const TARGETS = ['introduction', 'themes', 'ecosystem', 'why-exhibit', 'experience'];
 
@@ -16,6 +16,11 @@ const TARGETS = ['introduction', 'themes', 'ecosystem', 'why-exhibit', 'experien
 export function ChapterRail({ dict }: { dict: Dictionary }) {
   const active = useActiveSection(TARGETS);
   const activeIndex = Math.max(0, TARGETS.indexOf(active ?? TARGETS[0]));
+  // Stays hidden over the hero, where it would sit in the middle of the
+  // composition competing with the title.
+  const visible = useScrolledPast(96);
+
+  if (!visible) return null;
 
   return (
     <nav

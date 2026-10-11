@@ -54,11 +54,18 @@ const config: Config = {
         display: ['var(--font-arabic)', 'var(--font-inter)', 'system-ui', 'sans-serif'],
       },
       fontSize: {
-        /* Display — section headline and hero title only. */
-        'display-xl': ['clamp(2.25rem, 5.4vw, 4.5rem)', { lineHeight: '1.14', letterSpacing: '-0.02em' }],
-        'display-lg': ['clamp(1.75rem, 3.4vw, 3rem)', { lineHeight: '1.2', letterSpacing: '-0.018em' }],
-        'display-md': ['clamp(1.35rem, 2.2vw, 1.9rem)', { lineHeight: '1.28', letterSpacing: '-0.012em' }],
-        'display-sm': ['clamp(1.1rem, 1.5vw, 1.35rem)', { lineHeight: '1.36', letterSpacing: '-0.008em' }],
+        /*
+         * Display — section headline and hero title only.
+         *
+         * Capped at 3.375rem: the Arabic title runs to three lines, and at 4.5rem
+         * it swallowed the whole first screen. Letter-spacing is deliberately
+         * mild here; globals.css neutralises it to 0 for Arabic, where negative
+         * tracking breaks the joins between letters.
+         */
+        'display-xl': ['clamp(2rem, 3.9vw, 3.375rem)', { lineHeight: '1.24', letterSpacing: '-0.012em' }],
+        'display-lg': ['clamp(1.625rem, 2.9vw, 2.5rem)', { lineHeight: '1.26', letterSpacing: '-0.01em' }],
+        'display-md': ['clamp(1.3rem, 1.9vw, 1.625rem)', { lineHeight: '1.32', letterSpacing: '-0.006em' }],
+        'display-sm': ['clamp(1.075rem, 1.3vw, 1.25rem)', { lineHeight: '1.4', letterSpacing: '-0.004em' }],
 
         /* Numerals — deliberately tighter leading than type. */
         'stat-lg': ['clamp(2.125rem, 3vw, 2.625rem)', { lineHeight: '1.05', letterSpacing: '-0.02em' }],

@@ -115,15 +115,15 @@ function YanbuMap({ label, isAr }: { label: string; isAr: boolean }) {
         <path d="M0-16 5 4 0 0-5 4Z" fill="#E87722" />
         <path d="M0 16 5-4 0 0-5-4Z" fill="#8AA9D3" opacity="0.7" />
       </g>
-      <text x="452" y="332" textAnchor="middle" fontSize="10" fill="#8AA9D3" opacity="0.7" fontFamily="system-ui">
+      <text x="452" y="332" textAnchor="middle" fontSize="12" fill="#8AA9D3" opacity="0.75" fontFamily="system-ui">
         N
       </text>
       <text
         x="26"
         y="322"
-        fontSize="9"
+        fontSize="12"
         fill="#8AA9D3"
-        opacity="0.55"
+        opacity="0.6"
         fontFamily="system-ui"
         letterSpacing="1.6"
       >
@@ -187,7 +187,7 @@ export function LocationSection({ locale, dict }: { locale: Locale; dict: Dictio
             <div className="on-dark absolute bottom-4 start-4 end-4 flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-white/10 bg-navy-900/90 px-4 py-3 backdrop-blur-md">
               <div className="min-w-0">
                 <p className="font-display text-body-md font-bold text-white">{t.cityAr}</p>
-                <p lang="en" className="truncate font-inter text-label-xs uppercase tracking-[0.12em] text-muted">
+                <p lang="en" className="text-balance font-inter text-label-xs uppercase leading-snug tracking-[0.12em] text-muted">
                   {t.regionEn}
                 </p>
               </div>

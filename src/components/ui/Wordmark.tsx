@@ -61,9 +61,14 @@ export function Wordmark({
     <span className={cn('flex items-center gap-3', className)}>
       <EventMark tone={tone} className={compact ? 'h-9 w-9' : 'h-11 w-11'} />
       <span className="flex min-w-0 flex-col leading-tight">
+        {/*
+          Wrapping rather than truncating: at phone widths the English line used
+          to cut mid-word ("Supply Chain & Transport E"). Balance keeps it to
+          two tidy lines instead of one broken one.
+        */}
         <span
           className={cn(
-            'truncate font-display font-bold tracking-tight',
+            'text-balance font-display font-bold tracking-tight',
             compact ? 'text-body-md' : 'text-body-md sm:text-body-lg',
             ink,
           )}
@@ -72,7 +77,7 @@ export function Wordmark({
         </span>
         <span
           className={cn(
-            'truncate font-inter text-label-2xs font-semibold uppercase tracking-[0.14em] sm:text-label-2xs',
+            'text-balance font-inter text-label-2xs font-semibold uppercase leading-snug tracking-[0.12em]',
             muted,
           )}
         >

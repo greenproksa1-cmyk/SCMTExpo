@@ -84,10 +84,17 @@ const config: Config = {
         'body-sm': ['0.9375rem', { lineHeight: '1.7', letterSpacing: '-0.002em' }],
         'body-xs': ['0.875rem', { lineHeight: '1.65' }],
 
-        /* Meta — labels, captions, counters. */
-        'label-sm': ['0.75rem', { lineHeight: '1.45', letterSpacing: '0.01em' }],
-        'label-xs': ['0.6875rem', { lineHeight: '1.4', letterSpacing: '0.02em' }],
-        'label-2xs': ['0.625rem', { lineHeight: '1.4', letterSpacing: '0.03em' }],
+        /*
+         * Meta — labels, captions, counters.
+         *
+         * Fluid rather than fixed: these were pinned at 10–11px, which is below
+         * what a phone can render comfortably and left ~150 nodes on the page
+         * under 12px. The floor is now 11px and the ceiling 12–14px, so a phone
+         * gets readable labels and a desktop still gets the tight caption look.
+         */
+        'label-sm': ['clamp(0.8125rem, 1.7vw, 0.875rem)', { lineHeight: '1.45', letterSpacing: '0.01em' }],
+        'label-xs': ['clamp(0.75rem, 1.5vw, 0.8125rem)', { lineHeight: '1.4', letterSpacing: '0.02em' }],
+        'label-2xs': ['clamp(0.75rem, 1.25vw, 0.8125rem)', { lineHeight: '1.4', letterSpacing: '0.03em' }],
       },
       spacing: {
         /* Consistent vertical rhythm between sections and blocks. */

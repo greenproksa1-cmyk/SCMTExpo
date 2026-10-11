@@ -265,11 +265,11 @@
     display: inline-flex;
     align-items: center;
     gap: 0.625rem;
-    font-size: 0.6875rem;
+    font-size: clamp(0.75rem, 1.5vw, 0.8125rem);
     font-weight: 700;
     line-height: 1.4;
     text-transform: uppercase;
-    letter-spacing: 0.16em;
+    letter-spacing: 0.14em;
     color: var(--text-accent);
   }
   .eyebrow::before {

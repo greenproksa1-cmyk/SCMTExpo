@@ -100,8 +100,17 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
         style={{ height: 'var(--header-h)' }}
       >
         <div className="shell flex h-full items-center justify-between gap-4">
+          {/*
+            The wordmark is the first thing squeezed: on a phone the nav is
+            replaced by a burger, but the language switcher still competes, and
+            at 1280px the full nav leaves the text a few characters. So the
+            wordmark drops out below `sm` and the English line below `2xl`, rather
+            than truncating mid-word. aria-label keeps the link named while the
+            text is display:none.
+          */}
           <Link
             href={`/${locale}#top`}
+            aria-label={dict.event.wordmarkAr}
             className="min-w-0 rounded py-1"
           >
             <span className="flex min-w-0 items-center gap-3">
@@ -112,13 +121,13 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
                   <rect x="9" y="13" width="5" height="3" rx="0.6" />
                 </svg>
               </span>
-              <span className="flex min-w-0 flex-col leading-tight">
+              <span className="hidden min-w-0 flex-col leading-tight sm:flex">
                 <span className="truncate font-display text-body-md font-bold text-white">
                   {locale === 'ar' ? dict.event.wordmarkAr : dict.event.wordmarkEn}
                 </span>
                 <span
                   lang={locale === 'ar' ? 'en' : 'ar'}
-                  className="truncate font-inter text-label-2xs uppercase tracking-[0.12em] text-muted"
+                  className="hidden truncate font-inter text-label-2xs uppercase tracking-[0.12em] text-muted 2xl:block"
                 >
                   {locale === 'ar' ? dict.event.wordmarkEn : dict.event.wordmarkAr}
                 </span>

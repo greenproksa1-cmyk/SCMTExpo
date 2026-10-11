@@ -55,7 +55,7 @@ export function LanguageSwitcher({
       <span
         aria-hidden="true"
         className={cn(
-          'rounded-md px-2.5 py-1 text-label-xs font-bold tracking-wide',
+          'inline-flex min-h-6 items-center rounded-md px-2.5 py-1.5 text-label-xs font-bold tracking-wide',
           dark ? 'bg-white/12 text-white' : 'bg-navy-900 text-white',
         )}
       >
@@ -66,7 +66,7 @@ export function LanguageSwitcher({
         hrefLang={otherLocale}
         lang={otherLocale}
         className={cn(
-          'rounded-md px-2.5 py-1 text-label-xs font-semibold tracking-wide transition-colors duration-300',
+          'inline-flex min-h-6 items-center rounded-md px-2.5 py-1.5 text-label-xs font-semibold tracking-wide transition-colors duration-300',
           dark
             ? 'text-body hover:bg-white/10 hover:text-white'
             : 'text-muted hover:bg-surface hover:text-strong',

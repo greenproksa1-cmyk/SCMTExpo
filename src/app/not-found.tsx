@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { headers } from 'next/headers';
 import { NotFoundBody } from './NotFoundBody';
 import { isLocale, type Locale } from '@/lib/i18n';
+import { getDictionary } from '@/lib/dictionary';
 
 export const metadata: Metadata = {
   title: '404',
@@ -21,5 +22,10 @@ export default async function RootNotFound() {
   const raw = headerList.get('x-locale');
   const locale: Locale = raw && isLocale(raw) ? raw : 'ar';
 
-  return <NotFoundBody locale={locale} />;
+  // Resolved here because the dictionary is server-only; the component itself
+  // also runs on the client during the locale toggle.
+  const dict = getDictionary(locale);
+  const eventName = locale === 'ar' ? dict.event.wordmarkAr : dict.event.wordmarkEn;
+
+  return <NotFoundBody locale={locale} eventName={eventName} />;
 }

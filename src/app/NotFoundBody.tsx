@@ -13,7 +13,13 @@ import { getNotFoundCopy } from './notFoundCopy';
  * used: this component also renders inside the global not-found document,
  * which has no router context.
  */
-export function NotFoundBody({ locale: initialLocale = 'ar' }: { locale?: Locale }) {
+export function NotFoundBody({
+  locale: initialLocale = 'ar',
+  eventName,
+}: {
+  locale?: Locale;
+  eventName: string;
+}) {
   const [locale, setLocale] = useState<Locale>(initialLocale);
 
   useEffect(() => {
@@ -29,7 +35,7 @@ export function NotFoundBody({ locale: initialLocale = 'ar' }: { locale?: Locale
     document.documentElement.dir = next === 'ar' ? 'rtl' : 'ltr';
   }, []);
 
-  const t = getNotFoundCopy(locale);
+  const t = getNotFoundCopy(locale, eventName);
 
   return (
     <main id="main" className="on-dark relative flex min-h-dvh flex-col items-center justify-center overflow-hidden bg-navy-950 px-6 py-20 text-center">

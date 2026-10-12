@@ -1,5 +1,5 @@
-# معرض ومؤتمر سلاسل الإمداد والنقل البري والبحري
-### Supply Chain, Land & Maritime Transport Exhibition & Conference
+# معرض ومؤتمر ينبع لسلاسل الإمداد و النقل
+### Yanbu Supply Chain and Transport Exhibition & Conference
 
 Bilingual (Arabic-first, RTL) event website for the exhibition and conference in
 **Yanbu, Kingdom of Saudi Arabia — 10 January 2027, three days**.

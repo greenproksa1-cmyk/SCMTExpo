@@ -85,7 +85,7 @@ export function localeMetadata(locale: Locale): Metadata {
 /** JSON-LD `Event` + `WebSite` graph for one locale. */
 export function EventJsonLd({ locale }: { locale: Locale }) {
   const dict = getDictionary(locale);
-  const facts = getEventFacts(locale);
+  const facts = getEventFacts(locale, dict);
 
   const jsonLd = {
     '@context': 'https://schema.org',

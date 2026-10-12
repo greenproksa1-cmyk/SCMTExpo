@@ -1,18 +1,18 @@
 import type { Locale } from './i18n';
+import type { Dictionary } from './types';
 
-/** Event facts derived once from the dictionary, used by SEO and JSON-LD. */
-export function getEventFacts(locale: Locale) {
+/**
+ * Event facts for SEO and JSON-LD.
+ *
+ * The name is read from the dictionary rather than repeated here: it was
+ * duplicated once and the two copies drifted apart after a rename.
+ */
+export function getEventFacts(locale: Locale, dict: Dictionary) {
+  const isAr = locale === 'ar';
   return {
-    name: locale === 'ar'
-      ? 'معرض ومؤتمر سلاسل الإمداد والنقل البري والبحري'
-      : 'Supply Chain, Land & Maritime Transport Exhibition & Conference',
-    alternateName: locale === 'ar'
-      ? 'Supply Chain, Land & Maritime Transport Exhibition & Conference'
-      : 'معرض ومؤتمر سلاسل الإمداد والنقل البري والبحري',
-    description:
-      locale === 'ar'
-        ? 'معرض ومؤتمر متخصص يجمع كامل منظومة النقل واللوجستيات وسلاسل الإمداد والموانئ تحت سقف واحد في ينبع، المملكة العربية السعودية، 10 يناير 2027 لمدة ثلاثة أيام.'
-        : 'A specialised business platform bringing the entire transport, logistics and supply chain ecosystem under one roof. 10 January 2027, Yanbu, Kingdom of Saudi Arabia.',
+    name: isAr ? dict.event.wordmarkAr : dict.event.wordmarkEn,
+    alternateName: isAr ? dict.event.wordmarkEn : dict.event.wordmarkAr,
+    description: dict.meta.description,
     startDate: '2027-01-10T09:00:00+03:00',
     endDate: '2027-01-12T18:00:00+03:00',
     duration: 'P3D',

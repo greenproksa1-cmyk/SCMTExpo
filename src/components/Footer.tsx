@@ -139,11 +139,14 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
       {/* Link columns */}
       <div className="shell grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <p className="font-display text-body-md font-bold text-white">
-            {isAr ? dict.event.heroTitleAr : dict.event.heroTitleEn}
+          <p className="text-balance font-display text-body-md font-bold leading-snug text-white">
+            {isAr ? dict.event.wordmarkAr : dict.event.wordmarkEn}
           </p>
-          <p lang="en" className="mt-2.5 font-inter text-label-xs uppercase tracking-[0.12em] text-muted">
-            {dict.event.heroTitleEn}
+          <p
+            lang={isAr ? 'en' : 'ar'}
+            className="mt-2.5 text-balance font-inter text-label-xs uppercase leading-snug tracking-[0.08em] text-muted"
+          >
+            {isAr ? dict.event.wordmarkEn : dict.event.wordmarkAr}
           </p>
           <p className="mt-4 border-t border-white/10 pt-4 text-body-sm text-orange-300">
             {dict.event.tagline}

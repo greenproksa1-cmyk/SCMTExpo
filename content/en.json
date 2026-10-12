@@ -3,16 +3,16 @@
     "localeName": "English",
     "htmlLang": "en",
     "dir": "ltr",
-    "shortEventName": "Supply Chain, Land & Maritime Transport Exhibition & Conference",
-    "title": "Supply Chain, Land & Maritime Transport Exhibition & Conference | Yanbu 2027",
+    "shortEventName": "Yanbu Supply Chain and Transport Exhibition & Conference",
+    "title": "Yanbu Supply Chain and Transport Exhibition & Conference | Yanbu 2027",
     "description": "A specialised business platform bringing the entire transport, logistics and supply chain ecosystem under one roof. 10 January 2027, Yanbu, Kingdom of Saudi Arabia. Three days of industry, trade and logistics.",
     "keywords": "logistics exhibition, Yanbu, supply chain, land transport, maritime transport, ports, Saudi Arabia, 2027, logistics, sustainability, Red Sea"
   },
   "event": {
-    "nameAr": "معرض ومؤتمر سلاسل الإمداد والنقل البري والبحري",
-    "nameEn": "Supply Chain, Land & Maritime Transport Exhibition & Conference",
-    "wordmarkAr": "معرض ومؤتمر سلاسل الإمداد",
-    "wordmarkEn": "Supply Chain & Transport Expo",
+    "nameAr": "معرض ومؤتمر ينبع لسلاسل الإمداد و النقل",
+    "nameEn": "Yanbu Supply Chain and Transport Exhibition & Conference",
+    "wordmarkAr": "معرض ومؤتمر ينبع لسلاسل الإمداد و النقل",
+    "wordmarkEn": "Yanbu Supply Chain and Transport Exhibition & Conference",
     "tagline": "Connecting Industry. Moving Trade. Shaping Logistics.",
     "dateLineAr": "10 January 2027",
     "dateLineEn": "10 January 2027",
@@ -25,8 +25,8 @@
     "startISO": "2027-01-10T09:00:00+03:00",
     "endISO": "2027-01-12T18:00:00+03:00",
     "isoDuration": "P3D",
-    "heroTitleAr": "Supply Chain, Land & Maritime Transport Exhibition & Conference",
-    "heroTitleEn": "Supply Chain, Land & Maritime Transport Exhibition & Conference",
+    "heroTitleAr": "معرض ومؤتمر ينبع لسلاسل الإمداد و النقل",
+    "heroTitleEn": "Yanbu Supply Chain and Transport Exhibition & Conference",
     "heroKickerAr": "International Exhibition & Conference",
     "heroKickerEn": "International Exhibition & Conference",
     "scrollLabelAr": "Discover more",
@@ -35,12 +35,30 @@
   "nav": {
     "label": "Main navigation",
     "links": [
-      { "id": "introduction", "label": "Introduction" },
-      { "id": "themes", "label": "Themes & Objectives" },
-      { "id": "ecosystem", "label": "Exhibitor Ecosystem" },
-      { "id": "visitors", "label": "Target Visitors" },
-      { "id": "business-value", "label": "Business Value" },
-      { "id": "experience", "label": "Event Experience" }
+      {
+        "id": "introduction",
+        "label": "Introduction"
+      },
+      {
+        "id": "themes",
+        "label": "Themes & Objectives"
+      },
+      {
+        "id": "ecosystem",
+        "label": "Exhibitor Ecosystem"
+      },
+      {
+        "id": "visitors",
+        "label": "Target Visitors"
+      },
+      {
+        "id": "business-value",
+        "label": "Business Value"
+      },
+      {
+        "id": "experience",
+        "label": "Event Experience"
+      }
     ],
     "cta": "Book Your Space",
     "openMenu": "Open menu",
@@ -53,11 +71,31 @@
   "chapters": {
     "label": "Exhibition chapters",
     "items": [
-      { "id": "introduction", "title": "Introduction", "target": "introduction" },
-      { "id": "themes", "title": "Themes & Objectives", "target": "themes" },
-      { "id": "audience", "title": "Ecosystem & Audience", "target": "ecosystem" },
-      { "id": "value", "title": "Value & Impact", "target": "why-exhibit" },
-      { "id": "experience", "title": "Experience & Registration", "target": "experience" }
+      {
+        "id": "introduction",
+        "title": "Introduction",
+        "target": "introduction"
+      },
+      {
+        "id": "themes",
+        "title": "Themes & Objectives",
+        "target": "themes"
+      },
+      {
+        "id": "audience",
+        "title": "Ecosystem & Audience",
+        "target": "ecosystem"
+      },
+      {
+        "id": "value",
+        "title": "Value & Impact",
+        "target": "why-exhibit"
+      },
+      {
+        "id": "experience",
+        "title": "Experience & Registration",
+        "target": "experience"
+      }
     ]
   },
   "ui": {
@@ -83,10 +121,26 @@
     "ctaPrimary": "Book Your Space",
     "ctaSecondary": "Register as Visitor",
     "stats": [
-      { "value": 12, "suffix": "", "label": "Strategic objectives" },
-      { "value": 7, "suffix": "", "label": "Exhibitor sectors" },
-      { "value": 10, "suffix": "", "label": "Event stations" },
-      { "value": 3, "suffix": "", "label": "Days in Yanbu" }
+      {
+        "value": 12,
+        "suffix": "",
+        "label": "Strategic objectives"
+      },
+      {
+        "value": 7,
+        "suffix": "",
+        "label": "Exhibitor sectors"
+      },
+      {
+        "value": 10,
+        "suffix": "",
+        "label": "Event stations"
+      },
+      {
+        "value": 3,
+        "suffix": "",
+        "label": "Days in Yanbu"
+      }
     ]
   },
   "introduction": {
@@ -155,18 +209,66 @@
     "hubLabelEn": "Logistics Ecosystem",
     "hint": "Hover the radial diagram to explore the objectives, or browse the full list.",
     "items": [
-      { "number": "01", "title": "Opening new channels for cooperation", "description": "Opening New Channels for Commercial and Investment Cooperation Between Companies, Factories, Ports, and Service Providers." },
-      { "number": "02", "title": "Supporting Saudi Vision 2030", "description": "Supporting the Objectives of Saudi Vision 2030 and the National Transport and Logistics Strategy." },
-      { "number": "03", "title": "Enabling companies to showcase", "description": "Enabling Local and International Companies to Showcase Their Products, Services, and Solutions to Decision-Makers and Buyers." },
-      { "number": "04", "title": "One business platform", "description": "Bringing Together Stakeholders Across the Supply Chain and Land & Maritime Transport Ecosystem on One Business Platform." },
-      { "number": "05", "title": "Enhancing local content", "description": "Enhancing Local Content and Localizing Services, Solutions, and Technologies Related to the Transport and Supply Chain Sector." },
-      { "number": "06", "title": "Efficient cargo movement", "description": "Supporting Efficient Cargo Movement and Connecting Ports with Industrial Zones, Distribution Centers, and Markets." },
-      { "number": "07", "title": "Strengthening Yanbu's position", "description": "Strengthening Yanbu's Position as an Integrated Industrial and Logistics Hub on the Red Sea Coast." },
-      { "number": "08", "title": "Latest digital technologies", "description": "Showcasing the Latest Technologies and Digital Solutions that Enhance Transport and Supply Chain Management Efficiency." },
-      { "number": "09", "title": "Integrating land & maritime transport", "description": "Enhancing Integration Between Maritime and Land Transport, Warehousing, Handling, Distribution, and Logistics Services." },
-      { "number": "10", "title": "Attracting strategic investments", "description": "Attracting Strategic Investments in the Transport, Logistics, and Related Infrastructure Sectors." },
-      { "number": "11", "title": "A platform for dialogue", "description": "Providing a Platform for Dialogue Between Government and Private-Sector Entities on the Sector's Future Challenges and Opportunities." },
-      { "number": "12", "title": "Supporting startups and SMEs", "description": "Supporting Startups and SMEs and Enabling Them to Reach New Customers and Partners." }
+      {
+        "number": "01",
+        "title": "Opening new channels for cooperation",
+        "description": "Opening New Channels for Commercial and Investment Cooperation Between Companies, Factories, Ports, and Service Providers."
+      },
+      {
+        "number": "02",
+        "title": "Supporting Saudi Vision 2030",
+        "description": "Supporting the Objectives of Saudi Vision 2030 and the National Transport and Logistics Strategy."
+      },
+      {
+        "number": "03",
+        "title": "Enabling companies to showcase",
+        "description": "Enabling Local and International Companies to Showcase Their Products, Services, and Solutions to Decision-Makers and Buyers."
+      },
+      {
+        "number": "04",
+        "title": "One business platform",
+        "description": "Bringing Together Stakeholders Across the Supply Chain and Land & Maritime Transport Ecosystem on One Business Platform."
+      },
+      {
+        "number": "05",
+        "title": "Enhancing local content",
+        "description": "Enhancing Local Content and Localizing Services, Solutions, and Technologies Related to the Transport and Supply Chain Sector."
+      },
+      {
+        "number": "06",
+        "title": "Efficient cargo movement",
+        "description": "Supporting Efficient Cargo Movement and Connecting Ports with Industrial Zones, Distribution Centers, and Markets."
+      },
+      {
+        "number": "07",
+        "title": "Strengthening Yanbu's position",
+        "description": "Strengthening Yanbu's Position as an Integrated Industrial and Logistics Hub on the Red Sea Coast."
+      },
+      {
+        "number": "08",
+        "title": "Latest digital technologies",
+        "description": "Showcasing the Latest Technologies and Digital Solutions that Enhance Transport and Supply Chain Management Efficiency."
+      },
+      {
+        "number": "09",
+        "title": "Integrating land & maritime transport",
+        "description": "Enhancing Integration Between Maritime and Land Transport, Warehousing, Handling, Distribution, and Logistics Services."
+      },
+      {
+        "number": "10",
+        "title": "Attracting strategic investments",
+        "description": "Attracting Strategic Investments in the Transport, Logistics, and Related Infrastructure Sectors."
+      },
+      {
+        "number": "11",
+        "title": "A platform for dialogue",
+        "description": "Providing a Platform for Dialogue Between Government and Private-Sector Entities on the Sector's Future Challenges and Opportunities."
+      },
+      {
+        "number": "12",
+        "title": "Supporting startups and SMEs",
+        "description": "Supporting Startups and SMEs and Enabling Them to Reach New Customers and Partners."
+      }
     ]
   },
   "ecosystem": {
@@ -516,9 +618,18 @@
     "coastAr": "On the Red Sea Coast",
     "coastEn": "On the Red Sea Coast",
     "facts": [
-      { "label": "City", "value": "Yanbu" },
-      { "label": "Time Zone", "value": "Riyadh Time (GMT+3)" },
-      { "label": "Site Type", "value": "Industrial, economic & logistics hub" }
+      {
+        "label": "City",
+        "value": "Yanbu"
+      },
+      {
+        "label": "Time Zone",
+        "value": "Riyadh Time (GMT+3)"
+      },
+      {
+        "label": "Site Type",
+        "value": "Industrial, economic & logistics hub"
+      }
     ],
     "venueTitle": "Exhibition Venue",
     "venueTba": "To be announced",
@@ -585,12 +696,36 @@
       }
     },
     "boothSizes": [
-      { "value": "up-to-9", "labelAr": "Up to 9 m²", "labelEn": "Up to 9 m²" },
-      { "value": "9-18", "labelAr": "9 – 18 m²", "labelEn": "9 – 18 m²" },
-      { "value": "18-36", "labelAr": "18 – 36 m²", "labelEn": "18 – 36 m²" },
-      { "value": "36-72", "labelAr": "36 – 72 m²", "labelEn": "36 – 72 m²" },
-      { "value": "72-plus", "labelAr": "More than 72 m²", "labelEn": "More than 72 m²" },
-      { "value": "undecided", "labelAr": "Not decided yet", "labelEn": "Not decided yet" }
+      {
+        "value": "up-to-9",
+        "labelAr": "Up to 9 m²",
+        "labelEn": "Up to 9 m²"
+      },
+      {
+        "value": "9-18",
+        "labelAr": "9 – 18 m²",
+        "labelEn": "9 – 18 m²"
+      },
+      {
+        "value": "18-36",
+        "labelAr": "18 – 36 m²",
+        "labelEn": "18 – 36 m²"
+      },
+      {
+        "value": "36-72",
+        "labelAr": "36 – 72 m²",
+        "labelEn": "36 – 72 m²"
+      },
+      {
+        "value": "72-plus",
+        "labelAr": "More than 72 m²",
+        "labelEn": "More than 72 m²"
+      },
+      {
+        "value": "undecided",
+        "labelAr": "Not decided yet",
+        "labelEn": "Not decided yet"
+      }
     ],
     "consent": "By submitting this form you agree to be contacted by the Green Projects team regarding the Exhibition.",
     "validation": {

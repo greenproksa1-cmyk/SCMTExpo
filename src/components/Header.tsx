@@ -122,14 +122,14 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
                 </svg>
               </span>
               <span className="hidden min-w-0 flex-col leading-tight sm:flex">
-                <span className="truncate font-display text-body-md font-bold text-white">
+                {/*
+                  One name, wrapping to at most two lines. The name is now 39
+                  Arabic / 57 English characters; a second line for the other
+                  language pushed the block to 82px inside a 76px header, and it
+                  duplicates the hero title directly below anyway.
+                */}
+                <span className="max-w-[24ch] text-balance font-display text-body-md font-bold leading-tight text-white">
                   {locale === 'ar' ? dict.event.wordmarkAr : dict.event.wordmarkEn}
-                </span>
-                <span
-                  lang={locale === 'ar' ? 'en' : 'ar'}
-                  className="hidden truncate font-inter text-label-2xs uppercase tracking-[0.12em] text-muted 2xl:block"
-                >
-                  {locale === 'ar' ? dict.event.wordmarkEn : dict.event.wordmarkAr}
                 </span>
               </span>
             </span>

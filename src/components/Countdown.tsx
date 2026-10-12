@@ -60,8 +60,10 @@ function Unit({
       </span>
       <span
         className={cn(
-          'text-label-2xs font-semibold uppercase leading-tight tracking-[0.1em]',
-          'max-w-full truncate text-center',
+          // No truncation: "Minutes" and "Seconds" were being cut in English
+          // because uppercase plus wide tracking pushed them past the cell.
+          'text-label-2xs font-semibold uppercase leading-tight tracking-[0.05em]',
+          'block w-full text-center text-balance',
           tone === 'dark' ? 'text-muted' : 'text-muted',
         )}
       >

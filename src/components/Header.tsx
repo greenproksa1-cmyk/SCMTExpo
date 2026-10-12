@@ -101,41 +101,24 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
       >
         <div className="shell flex h-full items-center justify-between gap-4">
           {/*
-            The wordmark is the first thing squeezed: on a phone the nav is
-            replaced by a burger, but the language switcher still competes, and
-            at 1280px the full nav leaves the text a few characters. So the
-            wordmark drops out below `sm` and the English line below `2xl`, rather
-            than truncating mid-word. aria-label keeps the link named while the
-            text is display:none.
+            The name is the logo — no mark beside it, per the brand direction.
+            With the icon gone the wordmark gets the full width of the bar, so it
+            steps down on smaller screens instead: narrower and smaller on a
+            phone, and still tight at `lg`, which is exactly where the nav first
+            appears and the name has the least room. The name is never
+            abbreviated, only re-wrapped. aria-label keeps the link named.
           */}
           <Link
             href={`/${locale}#top`}
             aria-label={dict.event.wordmarkAr}
             className="min-w-0 rounded py-1"
           >
-            <span className="flex min-w-0 items-center gap-3">
-              <span aria-hidden="true" className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white text-orange-600">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M5 19V7h11" />
-                  <path d="M16 7v5M16 12h-3" />
-                  <rect x="9" y="13" width="5" height="3" rx="0.6" />
-                </svg>
-              </span>
-              <span className="hidden min-w-0 flex-col leading-tight sm:flex">
-                {/*
-                  One name, wrapping to at most two lines. The name is now 39
-                  Arabic / 57 English characters; a second line for the other
-                  language pushed the block to 82px inside a 76px header, and it
-                  duplicates the hero title directly below anyway.
-                */}
-                <span className="max-w-[24ch] text-balance font-display text-body-md font-bold leading-tight text-white">
-                  {locale === 'ar' ? dict.event.wordmarkAr : dict.event.wordmarkEn}
-                </span>
-              </span>
+            <span className="block max-w-[11.5rem] text-balance font-display text-label-sm font-bold leading-[1.25] text-white sm:max-w-[19rem] sm:text-body-md sm:leading-tight md:max-w-[24ch] xl:max-w-[34ch] xl:text-body-lg">
+              {locale === 'ar' ? dict.event.wordmarkAr : dict.event.wordmarkEn}
             </span>
           </Link>
 
-          <nav aria-label={dict.nav.label} className="hidden lg:block">
+          <nav aria-label={dict.nav.label} className="hidden xl:block">
             <ul className="flex items-center gap-1">
               {links.map((link) => {
                 const isActive = active === link.id;
@@ -184,7 +167,7 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
               aria-expanded={menuOpen}
               aria-controls="mobile-nav"
               aria-label={menuOpen ? dict.nav.closeMenu : dict.nav.openMenu}
-              className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-white/20 text-white lg:hidden"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-white/20 text-white xl:hidden"
             >
               <span className="relative block h-4 w-5" aria-hidden="true">
                 <span
@@ -225,7 +208,7 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           key="mobile-nav"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="on-dark fixed inset-0 z-40 overflow-y-auto bg-navy-950 px-6 pb-10 pt-[calc(var(--header-h)+1.5rem)] lg:hidden"
+          className="on-dark fixed inset-0 z-40 overflow-y-auto bg-navy-950 px-6 pb-10 pt-[calc(var(--header-h)+1.5rem)] xl:hidden"
         >
           <p className="eyebrow text-orange-300">{dict.event.heroKickerAr}</p>
           <h2 className="mt-4 text-display-sm text-white">{dict.event.heroTitleAr}</h2>

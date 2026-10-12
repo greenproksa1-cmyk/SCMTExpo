@@ -67,14 +67,24 @@ export function Introduction({ locale, dict }: { locale: Locale; dict: Dictionar
           </RevealGroup>
         </div>
 
-        {/* Photography — caption lives in its own box under the image. */}
+        {/* Photography — caption lives in its own box under the image.
+
+            These were top-down aerials cut from the hero shot. Read at card
+            size they were flat teal rectangles that said nothing about the
+            event, so the section now leads with the dusk terminal and pairs
+            it with warehousing and land transport: maritime, storage and
+            inland, which is the scope the copy describes. */}
         <RevealX from="end" className="lg:pt-16">
           <div className="space-y-4">
             <figure className="overflow-hidden rounded-2xl border">
-              <div className="relative aspect-[4/3] w-full bg-surface-2">
+              <div className="relative aspect-[16/10] w-full bg-surface-2">
                 <Image
-                  src="/images/containers.jpg"
-                  alt={isAr ? 'صفوف من الحاويات المكدسة في ميناء' : 'Rows of stacked containers at a port'}
+                  src="/images/intro-supply-chains.jpg"
+                  alt={
+                    isAr
+                      ? 'رصيف حاويات في ميناء ينبع عند الغروب مع رافعات الجantry'
+                      : 'A container quay at the port of Yanbu at dusk with gantry cranes'
+                  }
                   fill
                   sizes="(max-width: 1024px) 100vw, 42vw"
                   className="object-cover"
@@ -95,10 +105,14 @@ export function Introduction({ locale, dict }: { locale: Locale; dict: Dictionar
 
             <div className="grid grid-cols-2 gap-4">
               <figure className="overflow-hidden rounded-2xl border">
-                <div className="relative aspect-[4/3] w-full bg-surface-2">
+                <div className="relative aspect-[16/10] w-full bg-surface-2">
                   <Image
-                    src="/images/crane-detail.jpg"
-                    alt={isAr ? 'رافعات جantry في رصيف الميناء' : 'Gantry cranes on a port quay'}
+                    src="/images/warehouse.jpg"
+                    alt={
+                      isAr
+                        ? 'مستودع لوجستي برفوف تخزين ورافعة شوكية'
+                        : 'A logistics warehouse with racking and a forklift'
+                    }
                     fill
                     sizes="(max-width: 1024px) 45vw, 20vw"
                     className="object-cover"
@@ -106,10 +120,14 @@ export function Introduction({ locale, dict }: { locale: Locale; dict: Dictionar
                 </div>
               </figure>
               <figure className="overflow-hidden rounded-2xl border">
-                <div className="relative aspect-[4/3] w-full bg-surface-2">
+                <div className="relative aspect-[16/10] w-full bg-surface-2">
                   <Image
-                    src="/images/ship-quay.jpg"
-                    alt={isAr ? 'سفينة يرافقها رصيف الميناء' : 'A vessel alongside the quay'}
+                    src="/images/land-transport.jpg"
+                    alt={
+                      isAr
+                        ? 'أسطول شاحنات على الطريق البري'
+                        : 'A fleet of trucks on the highway'
+                    }
                     fill
                     sizes="(max-width: 1024px) 45vw, 20vw"
                     className="object-cover"

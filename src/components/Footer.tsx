@@ -104,7 +104,7 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
                           <a
                             href={row.href}
                             {...(row.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                            className={`link-underline mt-0.5 block text-body-md text-body hover:text-white ${row.ltr ? 'force-ltr text-start' : ''}`}
+                            className={`link-underline block py-0.5 text-body-md text-body transition-colors hover:text-white ${row.ltr ? 'force-ltr text-start' : ''}`}
                           >
                             {row.value}
                           </a>
@@ -160,7 +160,10 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           <ul className="mt-5 space-y-2.5">
             {dict.nav.links.map((link) => (
               <li key={link.id}>
-                <a href={`#${link.id}`} className="link-underline text-body-md text-body hover:text-white">
+                <a
+                  href={`#${link.id}`}
+                  className="link-underline block py-1 text-body-md text-body transition-colors hover:text-white"
+                >
                   {link.label}
                 </a>
               </li>

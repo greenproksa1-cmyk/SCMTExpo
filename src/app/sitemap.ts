@@ -38,5 +38,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
+  // The partners page is a real route of its own, not an anchor.
+  for (const locale of locales) {
+    entries.push({
+      url: `${siteUrl}/${locale}/partners`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+      alternates: {
+        languages: {
+          ar: `${siteUrl}/ar/partners`,
+          en: `${siteUrl}/en/partners`,
+        },
+      },
+    });
+  }
+
   return entries;
 }

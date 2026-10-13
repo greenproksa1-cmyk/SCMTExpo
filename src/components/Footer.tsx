@@ -168,6 +168,15 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
                 </a>
               </li>
             ))}
+            {/* The partners page is a route of its own, not an anchor. */}
+            <li>
+              <Link
+                href={`/${locale}/partners`}
+                className="link-underline block py-1 text-body-md text-body transition-colors hover:text-white"
+              >
+                {dict.partners.title}
+              </Link>
+            </li>
           </ul>
         </nav>
 

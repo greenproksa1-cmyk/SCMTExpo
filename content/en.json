@@ -770,5 +770,71 @@
     "rights": "All rights reserved",
     "madeWith": "Organised and led by",
     "disclaimer": "All information on this website is drawn from the Exhibition profile. Final details are updated regularly."
+  },
+  "partners": {
+    "eyebrow": "الشركاء",
+    "eyebrowEn": "PARTNERS",
+    "title": "الشركاء الاستراتيجيون",
+    "leadAr": "يقف الحدث على كتف منظومة وطنية كاملة: الجهات التي تُدير النقل والموانئ والطرق، ومؤسسات داعمة على المستوى المحلي والإقليمي.",
+    "leadEn": "The event stands on a complete national system: the authorities that govern transport, ports and roads, and the institutions that support commerce locally and across the region.",
+    "noteTitle": "شكر وتقدير",
+    "noteAr": "نقدّر الشراكة والدعم المقدم من هذه الجهات والشركات، الذي يسهم في استضافة الحدث وتطوير برنامجه.",
+    "noteEn": "We acknowledge the partnership and support provided by these organisations, which contributes to hosting the event and developing its programme.",
+    "backHome": "العودة إلى الصفحة الرئيسية",
+    "metaTitle": "الشركاء الاستراتيجيون | معرض ومؤتمر ينبع لسلاسل الإمداد والنقل",
+    "metaTitleEn": "Strategic Partners | Yanbu Supply Chain and Transport Exhibition & Conference",
+    "metaDescription": "الجهات والشركات الشريكة في معرض ومؤتمر ينبع لسلاسل الإمداد والنقل: هيئة الموانئ، هيئة النقل، هيئة الطرق، الغرفة التجارية بمدينة ينبع، الهيئة الملكية للجبيل وينبع، وأرامكو.",
+    "metaDescriptionEn": "The partner organisations of the Yanbu Supply Chain and Transport Exhibition and Conference: Saudi Ports Authority, Transport General Authority, Roads General Authority, Yanbu Chamber, Royal Commission for Jubail and Yanbu, and Aramco.",
+    "logoAlt": "شعار",
+    "items": [
+      {
+        "id": "mawani",
+        "logo": "/images/partners/mawani.png",
+        "nameAr": "هيئة الموانئ",
+        "nameEn": "Saudi Ports Authority",
+        "roleAr": "تنظيم الموانئ البحرية",
+        "roleEn": "Regulating the kingdom's seaports"
+      },
+      {
+        "id": "tga",
+        "logo": "/images/partners/tga.png",
+        "nameAr": "هيئة النقل",
+        "nameEn": "Transport General Authority",
+        "roleAr": "تنظيم النقل البري",
+        "roleEn": "Regulating land transport"
+      },
+      {
+        "id": "roads",
+        "logo": "/images/partners/roads.png",
+        "nameAr": "هيئة الطرق",
+        "nameEn": "Roads General Authority",
+        "roleAr": "إدارة الطرق السريعة",
+        "roleEn": "Managing the national highways"
+      },
+      {
+        "id": "yanbu-chamber",
+        "logo": "/images/partners/yanbu-chamber.png",
+        "nameAr": "الغرفة التجارية بمدينة ينبع",
+        "nameEn": "Yanbu Chamber",
+        "roleAr": "تمثيل المجتمع التجاري",
+        "roleEn": "Representing the business community"
+      },
+      {
+        "id": "rcjy",
+        "logo": "/images/partners/rcjy.png",
+        "nameAr": "الهيئة الملكية للجبيل وينبع",
+        "nameEn": "Royal Commission for Jubail and Yanbu",
+        "roleAr": "التخطيط والتطوير",
+        "roleEn": "Planning and development"
+      },
+      {
+        "id": "aramco",
+        "logo": "/images/partners/aramco.png",
+        "nameAr": "أرامكو",
+        "nameEn": "Aramco",
+        "roleAr": "شريك قطاعي رئيسي",
+        "roleEn": "Principal sector partner"
+      }
+    ]
   }
 }

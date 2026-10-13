@@ -1,8 +1,9 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import type { Locale } from '@/lib/i18n';
 import type { Dictionary } from '@/lib/types';
 import { cn } from '@/lib/cn';
@@ -27,8 +28,26 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   const [progress, setProgress] = useState(0);
   const scrolled = useScrolledPast(20);
   const active = useActiveSection(NAV_IDS);
+  const pathname = usePathname();
   const reduce = useReducedMotion() ?? false;
   const links = dict.nav.links;
+
+  /*
+    Most nav entries are sections of the landing page, so on that page a bare
+    `#id` is right and lets the smooth-scroll handler below take over. On any
+    other page there is no such element to scroll to, so the same link has to
+    become a route. The partners entry carries an explicit `href` because it is
+    always a route, landing page or not.
+  */
+  const onLanding = pathname === `/${locale}`;
+  const hrefFor = useCallback(
+    (link: { id: string; href?: string }) => {
+      if (link.href) return `/${locale}${link.href}`;
+      return onLanding ? `#${link.id}` : `/${locale}#${link.id}`;
+    },
+    [locale, onLanding],
+  );
+  const registerHref = onLanding ? '#register' : `/${locale}#register`;
 
   // Smooth in-page navigation that respects the sticky header offset.
   useEffect(() => {
@@ -59,9 +78,27 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
     };
     document.addEventListener('keydown', onKey);
     document.body.style.overflow = 'hidden';
+
+    /*
+      The sheet covers the viewport but the page behind it stays in the
+      accessibility tree, so a keyboard reader could tab straight through the
+      menu into content nobody can see. `inert` takes the background out of both
+      the a11y tree and the tab order while the sheet is open, which is also
+      what silences axe's `region` rule — the six sections behind it were being
+      counted as content outside any landmark.
+    */
+    const background = [
+      document.getElementById('main'),
+      document.querySelector('footer'),
+      document.getElementById('floating-actions'),
+    ].filter((el): el is HTMLElement => el !== null);
+
+    background.forEach((el) => el.setAttribute('inert', ''));
+
     return () => {
       document.removeEventListener('keydown', onKey);
       document.body.style.overflow = '';
+      background.forEach((el) => el.removeAttribute('inert'));
     };
   }, [menuOpen]);
 
@@ -119,16 +156,24 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           </Link>
 
           <nav aria-label={dict.nav.label} className="hidden xl:block">
-            <ul className="flex items-center gap-1">
+            <ul className="flex items-center gap-0.5">
               {links.map((link) => {
-                const isActive = active === link.id;
+                /*
+                  A route entry is never "in view" from the scroll tracker —
+                  there are no sections on it — so it is matched against the
+                  path instead, which also makes it light up while the reader
+                  is on the partners page.
+                */
+                const isActive = link.href
+                  ? pathname === `/${locale}${link.href}`
+                  : onLanding && active === link.id;
                 return (
                   <li key={link.id}>
-                    <a
-                      href={`#${link.id}`}
+                    <Link
+                      href={hrefFor(link)}
                       aria-current={isActive ? 'true' : undefined}
                       className={cn(
-                        'relative block rounded px-3.5 py-2 text-body-xs font-semibold transition-colors duration-300',
+                        'relative block rounded px-2.5 py-2 text-body-xs font-semibold transition-colors duration-300 xl:px-3',
                         isActive ? 'text-white' : 'text-muted hover:text-white',
                       )}
                     >
@@ -136,10 +181,10 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
                       {isActive && (
                         <span
                           aria-hidden="true"
-                          className="absolute inset-x-3 -bottom-px h-0.5 rounded-full bg-orange-500"
+                          className="absolute inset-x-2.5 -bottom-px h-0.5 rounded-full bg-orange-500 xl:inset-x-3"
                         />
                       )}
-                    </a>
+                    </Link>
                   </li>
                 );
               })}
@@ -157,9 +202,9 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
               className="hidden sm:inline-flex"
             />
 
-            <a href="#register" className="btn btn-accent hidden px-5 py-2.5 text-label-sm sm:inline-flex">
+            <Link href={registerHref} className="btn btn-accent hidden px-5 py-2.5 text-label-sm sm:inline-flex">
               {dict.nav.cta}
-            </a>
+            </Link>
 
             <button
               type="button"
@@ -206,6 +251,9 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
         <motion.div
           id="mobile-nav"
           key="mobile-nav"
+          role="dialog"
+          aria-modal="true"
+          aria-label={dict.nav.label}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           className="on-dark fixed inset-0 z-40 overflow-y-auto bg-navy-950 px-6 pb-10 pt-[calc(var(--header-h)+1.5rem)] xl:hidden"
@@ -220,26 +268,26 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
             <ul className="divide-y divide-white/10 border-y border-white/10">
               {links.map((link, i) => (
                 <li key={link.id}>
-                  <a
-                    href={`#${link.id}`}
+                  <Link
+                    href={hrefFor(link)}
                     className="flex items-center gap-4 py-4 text-body transition hover:text-white"
                   >
                     <span className="numeral w-6 shrink-0 text-label-xs text-orange-400">
                       {String(i + 1).padStart(2, '0')}
                     </span>
                     <span className="text-display-sm font-semibold">{link.label}</span>
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
           </nav>
 
-          <a href="#register" className="btn btn-accent mt-8 w-full">
+          <Link href={registerHref} className="btn btn-accent mt-8 w-full">
             {dict.nav.cta}
-          </a>
-          <a href="#register" className="btn btn-ghost-dark mt-3 w-full">
+          </Link>
+          <Link href={registerHref} className="btn btn-ghost-dark mt-3 w-full">
             {dict.register.tabs.visitor}
-          </a>
+          </Link>
 
           <div className="mt-10">
             <LanguageSwitcher

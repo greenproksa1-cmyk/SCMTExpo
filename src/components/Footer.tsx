@@ -160,23 +160,20 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           <ul className="mt-5 space-y-2.5">
             {dict.nav.links.map((link) => (
               <li key={link.id}>
-                <a
-                  href={`#${link.id}`}
+                {/*
+                  Same rule as the header: a bare `#id` only works on the
+                  landing page, where the section exists to scroll to. The
+                  partners entry carries an explicit `href` because it is a
+                  route from anywhere, including the landing page itself.
+                */}
+                <Link
+                  href={link.href ? `/${locale}${link.href}` : `/${locale}#${link.id}`}
                   className="link-underline block py-1 text-body-md text-body transition-colors hover:text-white"
                 >
                   {link.label}
-                </a>
+                </Link>
               </li>
             ))}
-            {/* The partners page is a route of its own, not an anchor. */}
-            <li>
-              <Link
-                href={`/${locale}/partners`}
-                className="link-underline block py-1 text-body-md text-body transition-colors hover:text-white"
-              >
-                {dict.partners.title}
-              </Link>
-            </li>
           </ul>
         </nav>
 

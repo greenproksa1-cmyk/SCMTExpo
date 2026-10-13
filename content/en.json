@@ -58,6 +58,11 @@
       {
         "id": "experience",
         "label": "Event Experience"
+      },
+      {
+        "id": "partners",
+        "label": "Strategic Partners",
+        "href": "/partners"
       }
     ],
     "cta": "Book Your Space",

@@ -45,6 +45,7 @@ export function FloatingActions({
 
   return (
     <aside
+      id="floating-actions"
       aria-label={locale === 'ar' ? 'إجراءات سريعة' : 'Quick actions'}
       className="contents"
     >

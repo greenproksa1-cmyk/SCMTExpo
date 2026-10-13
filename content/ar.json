@@ -58,6 +58,11 @@
       {
         "id": "experience",
         "label": "تجربة الحدث"
+      },
+      {
+        "id": "partners",
+        "label": "الشركاء الاستراتيجيون",
+        "href": "/partners"
       }
     ],
     "cta": "احجز مساحتك",

@@ -95,6 +95,29 @@ const config: Config = {
         'label-sm': ['clamp(0.8125rem, 1.7vw, 0.875rem)', { lineHeight: '1.45', letterSpacing: '0.01em' }],
         'label-xs': ['clamp(0.75rem, 1.5vw, 0.8125rem)', { lineHeight: '1.4', letterSpacing: '0.02em' }],
         'label-2xs': ['clamp(0.75rem, 1.25vw, 0.8125rem)', { lineHeight: '1.4', letterSpacing: '0.03em' }],
+
+        /*
+         * The desktop header nav.
+         *
+         * Seven labels have to share one fixed-width bar: the shell caps at
+         * 82rem, so past 1312px of viewport there is no more room to win and a
+         * fluid size would only shrink needlessly on a wide screen. The measured
+         * one-line cost is 759px in Arabic and 988px in English at the old 14px
+         * `body-xs`, against a 1200px budget that also has to hold the wordmark
+         * and the booking button — English simply did not fit, and every label
+         * silently wrapped to two lines.
+         *
+         * 12px is the floor the label scale already sits at (`label-xs` and
+         * `label-2xs` both bottom out there), so this stays inside the type
+         * system rather than inventing a new tier. Below this the wordmark
+         * starts losing lines and the trade stops being worth making: at 12px
+         * English still gets 198px, enough for three lines; squeezing the nav
+         * further would buy the logo a fourth line of height it cannot use.
+         *
+         * Letter spacing is zero on purpose — any tracking on Arabic breaks
+         * the joins between letters.
+         */
+        'label-nav': ['0.75rem', { lineHeight: '1.4', letterSpacing: '0' }],
       },
       spacing: {
         /* Consistent vertical rhythm between sections and blocks. */

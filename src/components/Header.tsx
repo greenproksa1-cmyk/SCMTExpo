@@ -136,7 +136,15 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
         )}
         style={{ height: 'var(--header-h)' }}
       >
-        <div className="shell flex h-full items-center justify-between gap-4">
+        {/*
+          `gap-2` is a minimum, not a fixed gap: `justify-between` hands the
+          leftover space back to the gaps on a wide screen, so the bar breathes
+          at 1440 and tightens to 8px at 1280, which is the only viewport where
+          the English set does not fit. Everything here was measured — the
+          shell caps at 1312px, so there is no width above 1366 that buys more
+          room.
+        */}
+        <div className="shell flex h-full items-center justify-between gap-2">
           {/*
             The name is the logo — no mark beside it, per the brand direction.
             With the icon gone the wordmark gets the full width of the bar, so it
@@ -144,19 +152,31 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
             phone, and still tight at `lg`, which is exactly where the nav first
             appears and the name has the least room. The name is never
             abbreviated, only re-wrapped. aria-label keeps the link named.
+
+            `min-w` on the link is the counterpart to `shrink-0` on the nav: it
+            stops the longest string on the page from being squeezed into a
+            50px ribbon when English needs the room. Arabic still fits on one
+            line; English wraps, which is the deliberate trade.
           */}
           <Link
             href={`/${locale}#top`}
             aria-label={dict.event.wordmarkAr}
-            className="min-w-0 rounded py-1"
+            className="min-w-[9.5rem] shrink rounded py-1 xl:min-w-[10.5rem]"
           >
-            <span className="block max-w-[11.5rem] text-balance font-display text-label-sm font-bold leading-[1.25] text-white sm:max-w-[19rem] sm:text-body-md sm:leading-tight md:max-w-[24ch] xl:max-w-[34ch] xl:text-body-lg">
+            <span className="block max-w-[11.5rem] text-balance font-display text-label-sm font-bold leading-[1.25] text-white sm:max-w-[19rem] sm:text-body-md sm:leading-tight md:max-w-[24ch] xl:max-w-[34ch] xl:text-body-sm">
               {locale === 'ar' ? dict.event.wordmarkAr : dict.event.wordmarkEn}
             </span>
           </Link>
 
           <nav aria-label={dict.nav.label} className="hidden xl:block">
-            <ul className="flex items-center gap-0.5">
+            {/*
+              `shrink-0` on each label is what actually holds the bar together.
+              Without it the seven links quietly absorb the shortfall by
+              wrapping to two lines, and because a flex item will never report
+              as overflowing, nothing ever looks broken — the nav just looks
+              untidy. They are never allowed to wrap from here on.
+            */}
+            <ul className="flex items-center">
               {links.map((link) => {
                 /*
                   A route entry is never "in view" from the scroll tracker —
@@ -168,12 +188,12 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
                   ? pathname === `/${locale}${link.href}`
                   : onLanding && active === link.id;
                 return (
-                  <li key={link.id}>
+                  <li key={link.id} className="shrink-0">
                     <Link
                       href={hrefFor(link)}
                       aria-current={isActive ? 'true' : undefined}
                       className={cn(
-                        'relative block rounded px-2.5 py-2 text-body-xs font-semibold transition-colors duration-300 xl:px-3',
+                        'relative block whitespace-nowrap rounded px-1.5 py-2 text-label-nav font-semibold transition-colors duration-300',
                         isActive ? 'text-white' : 'text-muted hover:text-white',
                       )}
                     >
@@ -181,7 +201,7 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
                       {isActive && (
                         <span
                           aria-hidden="true"
-                          className="absolute inset-x-2.5 -bottom-px h-0.5 rounded-full bg-orange-500 xl:inset-x-3"
+                          className="absolute inset-x-2 -bottom-px h-0.5 rounded-full bg-orange-500"
                         />
                       )}
                     </Link>
@@ -202,7 +222,10 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
               className="hidden sm:inline-flex"
             />
 
-            <Link href={registerHref} className="btn btn-accent hidden px-5 py-2.5 text-label-sm sm:inline-flex">
+            <Link
+              href={registerHref}
+              className="btn btn-accent hidden shrink-0 whitespace-nowrap px-2.5 py-2.5 text-label-xs sm:inline-flex"
+            >
               {dict.nav.cta}
             </Link>
 

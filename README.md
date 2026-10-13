@@ -125,6 +125,34 @@ navy and the very light surface backgrounds, so any new text should pick a role
 class, and any new dark panel should carry the `on-dark` class. The `<Section>`
 component applies `on-dark` automatically when `tone="dark"`.
 
+### The header nav is width-bound, not style-bound
+
+`--shell` is 82rem, so the header stops growing at 1312px of viewport. Past
+that, extra screen width buys nothing — which makes the desktop nav a fixed
+problem to solve rather than a responsive one. Seven labels, the wordmark and
+the booking button share 1232px, and the measured one-line cost at the old 14px
+`body-xs` was 759px in Arabic and **988px in English**. English did not fit, and
+it did not fail visibly: a flex item will never report as overflowing, so the
+links simply wrapped to two lines and the header looked untidy rather than
+broken.
+
+Three things hold it together, and all three are load-bearing:
+
+- **`whitespace-nowrap` + `shrink-0` on each nav label.** Without them the links
+  absorb any shortfall by wrapping. This is what silently hid the problem.
+- **`label-nav` at 12px**, in `tailwind.config.ts`. Fixed rather than fluid,
+  because the bar stops widening at 1312px — a fluid size would only shrink
+  needlessly on a large screen. 12px is where `label-xs` and `label-2xs`
+  already bottom out, so it stays inside the existing scale.
+- **`min-w` on the wordmark**, so the longest string on the page cannot be
+  squeezed into a 50px ribbon when English needs the room.
+
+The wordmark ends up on one line in Arabic and three in English. Two lines for
+English would need 260px and one line would need 440px, against the 173–216px
+left over — it cannot be done at this shell width without either widening
+`--shell` for the whole site or dropping nav items. Wrapping is the deliberate
+trade: the name is never abbreviated and never shrunk below readability.
+
 ---
 
 ## 5. Images & visual system

@@ -81,12 +81,11 @@ export function PartnersPage({ locale, dict }: { locale: Locale; dict: Dictionar
         <section className="relative scroll-mt-24 border-b border-navy-100 bg-surface-alt py-20 sm:py-24">
           <div className="shell">
             {/*
-              Two columns on a phone, three from sm, four from lg. The Royal
-              Commission card spans two columns because its mark is roughly three
-              times wider than the others; giving it room reads better than
-              shrinking every other logo to match it.
+              Two columns on a phone and three from sm, which divides the six
+              partners evenly at every size — three by three on a desktop, with
+              no orphaned cell in a final row.
             */}
-            <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-5 lg:grid-cols-4">
+            <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-5">
               {t.items.map((partner, i) => (
                 <motion.li
                   key={partner.id}
@@ -94,7 +93,6 @@ export function PartnersPage({ locale, dict }: { locale: Locale; dict: Dictionar
                   className={cn(
                     'group relative flex h-full flex-col overflow-hidden rounded-2xl border border-navy-100 bg-white p-5 shadow-card transition-all duration-300',
                     'hover:-translate-y-1 hover:border-orange-300 hover:shadow-card-lg',
-                    partner.id === 'rcjy' && 'col-span-2',
                   )}
                 >
                   {/*
@@ -109,12 +107,21 @@ export function PartnersPage({ locale, dict }: { locale: Locale; dict: Dictionar
                     {String(i + 1).padStart(2, '0')}
                   </span>
 
-                  {/* Uniform logo box; every mark fitted inside it undistorted */}
-                  <div className="flex h-24 items-center justify-center sm:h-28">
+                  {/*
+                    Minimum height, not a fixed one. The six marks run from
+                    0.78 to 4.23 in aspect ratio, so a fixed-height box would
+                    crop the portrait ones down to less area than the rest and
+                    the wall would stop reading as six peers. A minimum lets
+                    each mark take the height its own width implies.
+                  */}
+                  <div className="flex min-h-24 items-center justify-center sm:min-h-28">
                     <PartnerMark
                       src={partner.logo}
                       alt={`${t.logoAlt} ${isAr ? partner.nameAr : partner.nameEn}`}
                       fallback={isAr ? partner.nameAr : partner.nameEn}
+                      scale={partner.logoScale}
+                      width={partner.logoW}
+                      height={partner.logoH}
                     />
                   </div>
 
@@ -170,8 +177,28 @@ export function PartnersPage({ locale, dict }: { locale: Locale; dict: Dictionar
 /**
  * The partner logo, or a typographic lockup if the file has not been supplied.
  * React state rather than an onError DOM patch, so it behaves properly.
+ *
+ * `scale` is the percentage of the card's width this mark should occupy, and
+ * `width`/`height` are the file's real pixel dimensions. Both are needed: the
+ * percentages come from `scripts/partner-logo-scale.py`, which equalises
+ * rendered area across the six so the wall reads as six peers, and without the
+ * true ratio a width-driven logo would be stretched to the wrong shape.
  */
-function PartnerMark({ src, alt, fallback }: { src: string; alt: string; fallback: string }) {
+function PartnerMark({
+  src,
+  alt,
+  fallback,
+  scale,
+  width,
+  height,
+}: {
+  src: string;
+  alt: string;
+  fallback: string;
+  scale: number;
+  width: number;
+  height: number;
+}) {
   const [failed, setFailed] = useState(false);
 
   if (failed) {
@@ -186,10 +213,11 @@ function PartnerMark({ src, alt, fallback }: { src: string; alt: string; fallbac
     <Image
       src={src}
       alt={alt}
-      width={560}
-      height={280}
-      // contain, never cover: a logo is never cropped or stretched
-      className="h-full w-full object-contain"
+      width={width}
+      height={height}
+      // height follows from the real ratio, so the mark is never distorted
+      className="h-auto max-w-full"
+      style={{ width: `${scale}%` }}
       onError={() => setFailed(true)}
     />
   );

@@ -793,7 +793,10 @@
         "nameAr": "هيئة الموانئ",
         "nameEn": "Saudi Ports Authority",
         "roleAr": "تنظيم الموانئ البحرية",
-        "roleEn": "Regulating the kingdom's seaports"
+        "roleEn": "Regulating the kingdom's seaports",
+        "logoScale": 47.1,
+        "logoW": 704,
+        "logoH": 345
       },
       {
         "id": "tga",
@@ -801,7 +804,10 @@
         "nameAr": "هيئة النقل",
         "nameEn": "Transport General Authority",
         "roleAr": "تنظيم النقل البري",
-        "roleEn": "Regulating land transport"
+        "roleEn": "Regulating land transport",
+        "logoScale": 42.3,
+        "logoW": 451,
+        "logoH": 274
       },
       {
         "id": "roads",
@@ -809,7 +815,10 @@
         "nameAr": "هيئة الطرق",
         "nameEn": "Roads General Authority",
         "roleAr": "إدارة الطرق السريعة",
-        "roleEn": "Managing the national highways"
+        "roleEn": "Managing the national highways",
+        "logoScale": 67.7,
+        "logoW": 469,
+        "logoH": 111
       },
       {
         "id": "yanbu-chamber",
@@ -817,7 +826,10 @@
         "nameAr": "الغرفة التجارية بمدينة ينبع",
         "nameEn": "Yanbu Chamber",
         "roleAr": "تمثيل المجتمع التجاري",
-        "roleEn": "Representing the business community"
+        "roleEn": "Representing the business community",
+        "logoScale": 29.1,
+        "logoW": 404,
+        "logoH": 519
       },
       {
         "id": "rcjy",
@@ -825,7 +837,10 @@
         "nameAr": "الهيئة الملكية للجبيل وينبع",
         "nameEn": "Royal Commission for Jubail and Yanbu",
         "roleAr": "التخطيط والتطوير",
-        "roleEn": "Planning and development"
+        "roleEn": "Planning and development",
+        "logoScale": 34.1,
+        "logoW": 780,
+        "logoH": 728
       },
       {
         "id": "aramco",
@@ -833,7 +848,10 @@
         "nameAr": "أرامكو",
         "nameEn": "Aramco",
         "roleAr": "شريك قطاعي رئيسي",
-        "roleEn": "Principal sector partner"
+        "roleEn": "Principal sector partner",
+        "logoScale": 53.2,
+        "logoW": 418,
+        "logoH": 160
       }
     ]
   }

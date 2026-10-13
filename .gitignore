@@ -66,6 +66,8 @@ site/
 backup_optimization/
 portfolio_extract/
 *.py
+# ...except the partner-logo pipeline, which the README tells people to run.
+!scripts/*.py
 optimize_admin.ps1
 rani-commercial.html
 

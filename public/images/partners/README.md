@@ -1,6 +1,6 @@
 # Partner logos
 
-Drop the six logo files here. The page reads exactly these paths.
+The six marks on `/ar/partners` and `/en/partners`, processed and ready.
 
 | File | Organisation |
 | --- | --- |
@@ -11,18 +11,57 @@ Drop the six logo files here. The page reads exactly these paths.
 | `rcjy.png` | الهيئة الملكية للجبيل وينبع — Royal Commission for Jubail and Yanbu |
 | `aramco.png` | أرامكو — Aramco |
 
-## What works
+## Do not hand-edit these files
 
-PNG with a transparent background is best. SVG works too, but then the file
-name has to keep the `.png` extension, which is confusing — convert to PNG
-instead.
+Each one is processed, not downloaded as it arrived:
 
-The layout fits every logo with `object-contain` inside a fixed box, so the
-proportions do not matter. The six marks are genuinely different shapes —
-Mawani and Aramco are near-square, the Royal Commission is about three times
-wider than it is tall — and each gets the same generous box, so none of them is
-cropped or stretched. The Royal Commission card spans two grid columns because
-of that width.
+1. `python scripts/prepare-partner-logos.py` — makes the background
+   transparent, trims the dead white space, scales it down and re-saves.
+2. `python scripts/partner-logo-scale.py --write` — reads the resulting
+   dimensions and writes `logoW`, `logoH` and `logoScale` into the partner
+   entries in `content/ar.json` and `content/en.json`.
+
+Run both, in that order, after replacing a file.
+
+## Why the white space had to go
+
+The sources were padded generously — Aramco and Roads had around 45% of their
+canvas empty. Because a logo is fitted to its own bounding box, that padding is
+what the browser fits, so a padded mark prints visibly smaller than a tight
+one. Trimming first is the single thing that makes the wall look deliberate:
+
+| Mark | As downloaded | After trimming | Ratio |
+| --- | --- | --- | --- |
+| `roads.png` | 522x383 | 469x111 | 4.23 |
+| `aramco.png` | 554x554 | 418x160 | 2.61 |
+| `mawani.png` | 1280x720 | 704x345 | 2.04 |
+| `tga.png` | 545x366 | 451x274 | 1.65 |
+| `rcjy.png` | 3840x3575 | 780x728 | 1.07 |
+| `yanbu-chamber.png` | 556x551 | 404x519 | 0.78 |
+
+Note that the padding was lying about the shapes. Before trimming, the Royal
+Commission looked like a wide banner and Aramco looked square; in truth the
+Roads mark is the wide one at 4.23:1.
+
+## Why each mark is sized individually
+
+0.78 to 4.23 is a factor of 5.4. Given one shared box, the Chamber would print
+at 87x112 and the Roads mark at 253x60 — four logos would look large and two
+would look lost.
+
+So `logoScale` gives each mark a width as a percentage of its card, chosen so
+all six occupy the same **area**: width proportional to `sqrt(ratio)`, height to
+`1 / sqrt(ratio)`. Equal area is what the eye reads as "equally important",
+which is the whole point of a partner wall. A wide wordmark stays wide and
+short, because that is what it is — it is simply no longer half the size of the
+others. Measured spread across the six is 1.00, within a rounding step, at
+every viewport from 360px to 1920px.
+
+## Where the untouched downloads live
+
+`assets/partner-logos-source/`, deliberately outside `public/` so they are not
+served at a URL. The processing script is idempotent and always starts from
+those, so the wall can be re-balanced without going back to the source links.
 
 ## Until a file is there
 

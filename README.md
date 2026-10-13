@@ -41,6 +41,7 @@ Requires Node 18.18+ (developed on Node 20).
 | `/` | Redirects to `/ar` (or `/en` if the browser's `Accept-Language` prefers English) |
 | `/ar` | **Default locale.** Arabic, `dir="rtl"` |
 | `/en` | English, `dir="ltr"` |
+| `/ar/partners`, `/en/partners` | Strategic partners, its own route with its own metadata |
 | `/api/register` | `POST` endpoint for both registration forms (logs to console) |
 | `/sitemap.xml`, `/robots.txt` | Generated per-locale |
 | any other path | Localised 404 |
@@ -151,6 +152,31 @@ photograph so sections could use real imagery instead of illustration.
 
 To swap one, replace the file and keep the name (or update the `image` key in
 `content/*.json`).
+
+### Partner logos
+
+`public/images/partners/` holds the six strategic-partner marks, plus a README
+covering the pipeline in detail. Two rules govern them, and both came out of a
+measurement rather than taste:
+
+1. **Never hand-edit those files.** They are processed, not downloaded as they
+   arrived. After replacing one, run `python scripts/prepare-partner-logos.py`
+   to re-trim it, then `python scripts/partner-logo-scale.py --write` to
+   re-balance the wall. The first strips the background and the dead white
+   space, which was 45% of the canvas on two of the marks; the second writes
+   each logo's real pixel dimensions and its share of the card.
+2. **Every mark occupies the same rendered area.** The six run from 0.78 to
+   4.23 in aspect ratio, a factor of 5.4, so one shared box would print the
+   Chamber at 87×112 and the Roads mark at 253×60. `logoScale` sizes each width
+   by `sqrt(ratio)` so the areas match instead. Measured spread is 1.00 at every
+   viewport from 360px to 1920px.
+
+The untouched downloads sit in `assets/partner-logos-source/`, outside `public/`
+so they are not served at a URL. `scripts/prepare-partner-logos.py` is
+idempotent and always starts from those.
+
+If a logo file is missing the card shows the organisation's name in the brand
+typeface, so the grid never breaks and there is never a broken-image icon.
 
 ### Layout rules the design follows
 
@@ -304,19 +330,24 @@ Recorded so nothing is mistaken for profile data:
 ```
 content/                     ar.json · en.json   ← all copy
 public/images/               images from the profile PDF
+public/images/partners/      the six partner marks (processed — see §5)
+assets/partner-logos-source/ untouched logo downloads, not served
 src/
   middleware.ts              locale detection + redirect
   app/
     layout.tsx               pass-through root (multiple-root-layouts pattern)
     localeShell.tsx          <html lang dir>, fonts, JSON-LD, per-locale metadata
     LandingPage.tsx          the long-scroll page, shared by both locales
+    PartnersPage.tsx         strategic-partner logo wall, shared by both locales
     not-found.tsx            localised 404 (reads x-locale header)
     NotFoundBody.tsx         404 content
     globals.css              tokens + component classes
     (rtl)/layout.tsx         root layout → /ar, lang=ar dir=rtl
     (rtl)/ar/page.tsx
+    (rtl)/ar/partners/page.tsx
     (ltr)/layout.tsx         root layout → /en, lang=en dir=ltr
     (ltr)/en/page.tsx
+    (ltr)/en/partners/page.tsx
     api/register/route.ts    registration endpoint
     sitemap.ts  robots.ts  icon.svg
   components/
@@ -325,7 +356,7 @@ src/
     BusinessValue.tsx  EventExperience.tsx  LocationSection.tsx
     RegistrationSection.tsx  Footer.tsx  FloatingActions.tsx
     ChapterRail.tsx  PageLoader.tsx  Countdown.tsx  CountUp.tsx
-    LanguageSwitcher.tsx
+    LanguageSwitcher.tsx  LocationMap.tsx
     ui/
       Icons.tsx          24×24 line icon set + id → icon registries
       Photo.tsx          IconMark · StatTile · AccentRule · PhotoCard
@@ -334,7 +365,12 @@ src/
       Wordmark.tsx
   hooks/useScrollState.ts    active section, scroll progress
   lib/                       i18n, dictionary, cn, site facts
-scripts/check-content.cjs    dictionary sanity check
+scripts/
+  check-content.cjs           dictionary sanity check
+  scan-source.cjs             stray characters in components, CSS, content, SVG
+  scan-cjk.cjs                foreign-script check over served output
+  prepare-partner-logos.py    trim, de-background and scale the partner marks
+  partner-logo-scale.py       equalise rendered area across the six marks
 ```
 
 ### Reusable building blocks

@@ -106,8 +106,8 @@ export function RegistrationSection({ locale, dict }: { locale: Locale; dict: Di
   const placeholdersVisitor = dict.register.visitor.placeholders;
   const placeholders = mode === 'exhibit' ? placeholdersEx : placeholdersVisitor;
 
-  const sectorOptions = dict.ecosystem.items;
-  const categoryOptions = dict.visitors.items;
+  const sectorOptions = dict.sectors.items;
+  const categoryOptions = dict.visitors.subCategories.items;
 
   function setValue(name: string, next: string) {
     setValues((prev) => ({ ...prev, [name]: next }));

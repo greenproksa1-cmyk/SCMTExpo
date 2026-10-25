@@ -11,7 +11,7 @@ import { visitorIcons } from './ui/Icons';
 
 export function TargetVisitors({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   const [activeId, setActiveId] = useState<string | null>(null);
-  const groups = dict.visitors.items;
+  const groups = dict.visitors.subCategories.items;
   const isAr = locale === 'ar';
   const totalRoles = groups.reduce((sum, g) => sum + g.roles.length, 0);
 

@@ -4,13 +4,15 @@ import { isLocale } from '@/lib/i18n';
 import { Header } from '@/components/Header';
 import { Hero } from '@/components/Hero';
 import { Introduction } from '@/components/Introduction';
-import { KeyThemes } from '@/components/KeyThemes';
+import { ImportanceSection } from '@/components/ImportanceSection';
+import { TimingSection } from '@/components/TimingSection';
 import { Objectives } from '@/components/Objectives';
 import { ExhibitorEcosystem } from '@/components/ExhibitorEcosystem';
 import { TargetVisitors } from '@/components/TargetVisitors';
 import { WhyExhibit } from '@/components/WhyExhibit';
 import { BusinessValue } from '@/components/BusinessValue';
 import { EventExperience } from '@/components/EventExperience';
+import { PartnersSection } from '@/components/PartnersSection';
 import { LocationSection } from '@/components/LocationSection';
 import { RegistrationSection } from '@/components/RegistrationSection';
 import { Footer } from '@/components/Footer';
@@ -34,9 +36,10 @@ export function LandingPage({ locale: raw }: { locale: string }) {
 
       <main id="main">
         <Hero locale={raw} dict={dict} />
-        <Introduction locale={raw} dict={dict} />
 
-        <KeyThemes locale={raw} dict={dict} />
+        <ImportanceSection locale={raw} dict={dict} />
+        <TimingSection locale={raw} dict={dict} />
+
         <Objectives locale={raw} dict={dict} />
 
         <ExhibitorEcosystem locale={raw} dict={dict} />
@@ -44,7 +47,7 @@ export function LandingPage({ locale: raw }: { locale: string }) {
         <WhyExhibit locale={raw} dict={dict} />
         <BusinessValue locale={raw} dict={dict} />
         <EventExperience locale={raw} dict={dict} />
-        <LocationSection locale={raw} dict={dict} />
+        <PartnersSection locale={raw} dict={dict} />
         <RegistrationSection locale={raw} dict={dict} />
       </main>
 

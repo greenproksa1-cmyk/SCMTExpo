@@ -4,7 +4,7 @@ import type { Dictionary } from '@/lib/types';
 import { cn } from '@/lib/cn';
 import { useActiveSection, useScrolledPast } from '@/hooks/useScrollState';
 
-const TARGETS = ['introduction', 'themes', 'ecosystem', 'why-exhibit', 'experience'];
+const TARGETS = ['introduction', 'importance', 'timing', 'objectives', 'visitors', 'why-exhibit'];
 
 /**
  * Fixed chapter rail mirroring the 01–05 chapters in the event profile.
